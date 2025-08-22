@@ -51,6 +51,7 @@
 		--gap-space: 0.5rem;
 
 		--title: 2.5rem;
+		--subtitle: 1.5rem;
 		--body: 1.125rem;
 
     }
@@ -59,6 +60,23 @@
 		font-family: 'Clash Display';
 		src: url('fonts/ClashDisplay-Variable.ttf') format('truetype');
 	}
+
+	/* Trim the font by: https://line-height-trim.webflow.io/ */
+
+	:is([class*="u-text-style-"], h1, h2, h3, h4, h5, h6, p, blockquote) {
+		display: flow-root;
+	}
+	:is([class*="u-text-style-"], h1, h2, h3, h4, h5, h6, p, blockquote)::before {
+		content: "";
+		display: table;
+		margin-bottom: calc(-0.5lh + 0.34em);
+	}
+	:is([class*="u-text-style-"], h1, h2, h3, h4, h5, h6, p, blockquote)::after {
+		content: "";
+		display: table;
+		margin-bottom: calc(-0.5lh + 0.382em);
+	}
+
 
 	/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 

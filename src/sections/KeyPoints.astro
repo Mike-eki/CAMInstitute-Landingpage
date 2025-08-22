@@ -1,22 +1,24 @@
 ---
-
+import CompassIcon from "../svg/CompassIcon.astro"
+import SchoolIcon from "../svg/SchoolIcon.astro"
+import TeacherIcon from "../svg/TeacherIcon.astro"
 ---
 
 <section class="keypoints">
     <aside class="flex">
-    <div class="flex-item bubble-fill one small">
-        <img src="https://www.svgrepo.com/show/535262/circle.svg" width="20">
-        <p>Trayectoria +15 años</p>
+    <div class="flex-item flex-col bubble-fill one huge">
+        <CompassIcon color="--hue-purple-light" size={36} />
+        <p class="font-medium small">Trayectoria +15 años</p>
     </div>
-    <div class="flex-item bubble-fill two small">
-        <img src="https://www.svgrepo.com/show/535262/circle.svg" width="20">
-        <p>Docentes calificados</p>
+    <div class="flex-item flex-col bubble-fill two huge">
+        <TeacherIcon color="--hue-purple-light" size={36 - 6} />
+        <p class="font-medium small">Docentes calificados</p>
     </div>
     </aside>
     <aside class="flex">
-        <div class="flex-item bubble-fill big">
-            <img src="https://www.svgrepo.com/show/535262/circle.svg" width="20">
-            <p>Plataforma virtual moderna</p>
+        <div class="flex-item flex-col bubble-fill huge">
+            <SchoolIcon color="--hue-purple-light" size={36} />
+            <p class="font-medium big">Plataforma virtual moderna</p>
         </div>
     </aside>
 </section>
@@ -29,6 +31,13 @@
         background-color: var(--hue-purple-dark);
     }
 
+    .flex-col {
+        display: flex;
+        flex-direction: column;
+        gap: var(--element-vertical-space);
+        align-items: center;
+    }
+
     .flex {
         display: flex;
         justify-content: center;
@@ -36,6 +45,7 @@
     .flex-item {
         text-align: center;
     }
+    
 
     .small {
         width: 10ch;
@@ -43,9 +53,15 @@
     .big {
         width: 12ch;
     }
+    .huge {
+        width: 16ch;
+    }
 
     p {
         color: var(--hue-purple-light);
+    }
+    .font-medium {
+        font-size: var(--body);
     }
 
     .bubble-fill {

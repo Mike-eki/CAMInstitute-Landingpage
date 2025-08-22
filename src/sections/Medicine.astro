@@ -1,9 +1,12 @@
 ---
 import Card from "../components/Card.astro";
+import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
+import WhatsAppIcon from "../svg/WhatsAppIcon.astro";
 
 ---
 
 <section class="medicine">
+
     <h1>Acompañamiento para aprobar tus materias de Medicina</h1>
     <div class="carrusel">
         <div>Boton Next</div>
@@ -13,20 +16,50 @@ import Card from "../components/Card.astro";
         <Card />
         <div>Puntos ...</div>
     </div>
-    <div class="testimonies">
-        <div>
-            <quote>“Gracias al acompañamiento semanal, logré ordenar mis estudios y aprobar 3 materias en un solo cuatrimestre.”</quote>
-            <div>
-                <img src="https://www.svgrepo.com/show/535298/circle-user.svg" alt="" width="16">
-                <p>Juan Peréz</p>
-                <p>Estudiante de 3° año</p>
+
+
+    <div class="testimony">
+        <div class="testimony-quote">
+            <q>Gracias al acompañamiento semanal, logré ordenar mis estudios y aprobar 3 materias en un solo cuatrimestre.</q>
+            <div class="testimony-author">
+                <div class="avatar">
+                    <img src="https://www.svgrepo.com/show/535298/circle-user.svg" alt="" width="32">
+                </div>
+                <div class="testimony-author-info">
+                    <p>Juan Peréz</p>
+                    <p>Estudiante de 3° año</p>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="call-to-action">
+        <div class="flex">
+            <p>¿Tenés dudas?</p>
+            <p>¡Escribinos por WhatsApp!</p>
+        </div>
+        <a class="btn-cta" href="#">
+            <WhatsAppIcon color="--hue-purple-light" />
+            <strong>Enviar mensaje</strong>
+        </a>
+
+        <p style="padding-top: var(--element-vertical-space)">También puedes contactarnos por correo</p>
+        <a class="btn-cta" href="#">
+            <EmailLetterIcon color="--hue-purple-light" />
+            <strong>Enviar email</strong>
+        </a>
+    </div>
+    
 </section>
 
 <style>
     .medicine {
+        --content-vertical-space: 1.75rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--content-vertical-space);
+
         padding-block: var(--section-vertical-space);
         padding-inline: var(--section-horizontal-space);
 
@@ -37,8 +70,74 @@ import Card from "../components/Card.astro";
         color: var(--hue-purple-light);
     }
     h1 {
-        font-size: 2rem;
+        font-size: var(--title);
         font-weight: 500;
+    }
+
+    .testimony-quote q {
+        font-style: normal;
+        font-weight: 500;
+        font-size: var(--subtitle);
+        color: var(--hue-purple-light);
+    }
+    
+    .testimony {
+        max-width: 30rem;
+
+        border: 2px solid var(--hue-purple-light);
+        border-radius: var(--rounded);
+
+        padding-block: var(--content-vertical-space);
+        padding-inline: var(--content-horizontal-space);
+    }
+    .testimony-quote {
+        display: flex;
+        flex-direction: column;
+        gap: var(--element-vertical-space);
+    }
+
+    .testimony-author {
+        display: flex;
+        align-items: center;
+        gap: var(--element-horizontal-space);
+    }
+    .avatar {
+        display: flex;
+        align-items: center;
+
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+
+    a {
+        text-decoration: none;
+    }
+    .btn-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--element-horizontal-space);
+
+        background-color: var(--hue-purple);
+        color: var(--hue-purple-light);
+
+        border-radius: var(--rounded);
+
+        padding-block: var(--element-vertical-space);
+        padding-inline: var(--element-horizontal-space);
+
+        margin-block: var(--element-vertical-space)
+    }
+    .btn-cta strong {
+        font-weight: 500;
+        align-self: center;
+    }
+
+    .call-to-action .flex {
+        display: flex;
+        flex-direction: column;
+
+        gap: var(--element-vertical-space);
     }
 
 </style>

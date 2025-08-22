@@ -1,5 +1,6 @@
 ---
 import IconSVG from '../components/IconSVG.astro';
+import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
 ---
 
 <section class="hero">
@@ -16,7 +17,10 @@ import IconSVG from '../components/IconSVG.astro';
         </div>
 
         <div class="grid-item-2">
-            <a class="btn-cta" href="#"><IconSVG /><strong class="medium">¡Empezá hoy!</strong></a>
+            <a class="btn-cta" href="#">
+                <WhatsAppIcon color="--hue-purple" size={36} />
+                <strong class="medium font-subtitle">¡Empezá hoy!</strong>
+            </a>
             <aside class="bubble-fill">
                 <p>Con soporte de:</p>
                 <ul class="logo-list">
@@ -132,6 +136,13 @@ import IconSVG from '../components/IconSVG.astro';
         margin: 0;
     }
 
+    .font-body {
+        font-size: var(--body);
+    }
+    .font-subtitle {
+        font-size: var(--subtitle);
+    }
+
     strong {
         color: var(--hue-purple);
     }
@@ -156,7 +167,12 @@ import IconSVG from '../components/IconSVG.astro';
         flex-wrap: wrap;
         justify-content: center;
 
+        padding-top: var(--content-vertical-space);
+
         gap: var(--element-horizontal-space);
+    }
+    .logo-list li img {
+        /* width: 2rem; */
     }
 
     .image-frame {
