@@ -1,0 +1,65 @@
+---
+
+---
+
+<section class="keypoints">
+    <aside class="flex">
+    <div class="flex-item bubble-fill one small">
+        <img src="https://www.svgrepo.com/show/535262/circle.svg" width="20">
+        <p>Trayectoria +15 años</p>
+    </div>
+    <div class="flex-item bubble-fill two small">
+        <img src="https://www.svgrepo.com/show/535262/circle.svg" width="20">
+        <p>Docentes calificados</p>
+    </div>
+    </aside>
+    <aside class="flex">
+        <div class="flex-item bubble-fill big">
+            <img src="https://www.svgrepo.com/show/535262/circle.svg" width="20">
+            <p>Plataforma virtual moderna</p>
+        </div>
+    </aside>
+</section>
+
+<style>
+    .keypoints {
+        padding-block: var(--section-vertical-space);
+        padding-inline: var(--section-horizontal-space);
+
+        background-color: var(--hue-purple-dark);
+    }
+
+    .flex {
+        display: flex;
+        justify-content: center;
+    }
+    .flex-item {
+        text-align: center;
+    }
+
+    .small {
+        width: 10ch;
+    }
+    .big {
+        width: 12ch;
+    }
+
+    p {
+        color: var(--hue-purple-light);
+    }
+
+    .bubble-fill {
+        background-color: var(--hue-purple);
+
+        padding-block: var(--content-vertical-space);
+        padding-inline: var(--content-horizontal-space);
+
+        border-radius: var(--rounded);
+    }
+    .bubble-fill.one {
+        border-radius: var(--rounded) var(--rounded) 0 var(--rounded);
+    }
+    .bubble-fill.two {
+        border-radius: var(--rounded) var(--rounded) var(--rounded) 0;
+    }
+</style>

@@ -1,0 +1,173 @@
+---
+import IconSVG from '../components/IconSVG.astro';
+---
+
+<section class="hero">
+
+    <article class="grid content-space">
+
+        <div class="grid-item-1">
+            <header class="bubble-fill">
+                <h1 class="medium"><strong class="medium">Tu próximo paso académico,</strong> acompañado por expertos</h1>
+             </header>
+            <footer class="bubble-fill">
+                <p>En <strong class="regular">Instituto CAM</strong>  formamos futuros médicos, ofrecemos capacitaciones y enseñamos español como lengua extranjera. Además somos centro evaluador SIELE y DELE.</p>
+            </footer>
+        </div>
+
+        <div class="grid-item-2">
+            <a class="btn-cta" href="#"><IconSVG /><strong class="medium">¡Empezá hoy!</strong></a>
+            <aside class="bubble-fill">
+                <p>Con soporte de:</p>
+                <ul class="logo-list">
+                    <li>
+                        <img src="logos/UAI_logo.png" alt="UAI">
+                    </li>
+                    <li>
+                        <img src="logos/DELE_logo.png" alt="DELE">
+                    </li>
+                    <li>
+                        <img src="logos/SIELE_logo.png" alt="SIELE">
+                    </li>
+                    <li>
+                        <img src="logos/SEA_logo.png" alt="SEA">
+                    </li>
+                    <li>
+                        <img src="logos/HAIZEA_logo.svg" alt="HAIZEA">
+                    </li>
+                    <li>
+                        <img src="logos/CELE_logo.png" alt="CELE">
+                    </li>
+                </ul>
+            </aside>
+        </div>
+
+        <div class="grid-item-3 image-frame">
+            <img src="webp/estudiantes_001.webp" alt="" srcset="">
+        </div>
+
+    </article>
+
+</section>
+
+
+<style>
+    .hero {
+        padding-inline: var(--section-horizontal-space);
+        padding-block: var(--section-vertical-space);
+
+        background-color: var(--hue-purple-dark);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: min-content;
+    }
+    .grid-item-1 {
+        grid-column: span 2;
+        grid-row: 1;
+    }
+    .grid-item-2 {
+        grid-column: span 2;
+        grid-row: 2;
+
+        display: grid;
+        row-gap: var(--content-vertical-space);
+    }
+    .grid-item-3 {
+        grid-column: span 2;
+        grid-row: 1 / 3;
+    }
+
+    .flex {
+        display: flex;
+        width: 100%;
+    }
+    .flex-item {
+        flex: 1;
+    }
+
+    .elements-col {
+        display: flex;
+        flex-direction: column;
+    }
+    .elements-col.elements-space {
+        gap: var(--element-vertical-space);
+    }
+
+    .content-space {
+        gap: var(--content-vertical-space);
+    }
+
+    h1 {
+        color: var(--hue-purple-dark);
+        line-height: 1.5;
+        font-size: var(--title);
+    }
+    p {
+        color: var(--hue-purple-dark);
+        line-height: 1.5;
+        font-size: var(--body);
+    }
+    a {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        gap: var(--gap-space);
+
+        font-size: var(--body);
+
+        color: var(--hue-purple);
+        background-color: var(--hue-purple-light);
+
+        padding-block: var(--element-vertical-space);
+        padding-inline: var(--element-horizontal-space);
+
+        border-radius: var(--rounded);
+    }
+    ul, ul li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    strong {
+        color: var(--hue-purple);
+    }
+    .medium {
+        font-weight: 500;
+    }
+    .regular {
+        font-weight: 400;
+    }
+
+    .bubble-fill {
+        background-color: var(--hue-purple-light);
+
+        padding-block: var(--content-vertical-space);
+        padding-inline: var(--content-horizontal-space);
+
+        border-radius: var(--rounded);
+    }
+
+    .logo-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: var(--element-horizontal-space);
+    }
+
+    .image-frame {
+        overflow: hidden;
+    }
+
+    .image-frame img {
+        display: block;
+        max-width: 100%;
+        max-height: 30rem;
+        object-fit: cover;
+        border-radius: var(--rounded);
+    }
+</style>

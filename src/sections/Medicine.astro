@@ -1,0 +1,44 @@
+---
+import Card from "../components/Card.astro";
+
+---
+
+<section class="medicine">
+    <h1>Acompañamiento para aprobar tus materias de Medicina</h1>
+    <div class="carrusel">
+        <div>Boton Next</div>
+        <div>Boton Prev</div>
+        <Card />
+        <Card />
+        <Card />
+        <div>Puntos ...</div>
+    </div>
+    <div class="testimonies">
+        <div>
+            <quote>“Gracias al acompañamiento semanal, logré ordenar mis estudios y aprobar 3 materias en un solo cuatrimestre.”</quote>
+            <div>
+                <img src="https://www.svgrepo.com/show/535298/circle-user.svg" alt="" width="16">
+                <p>Juan Peréz</p>
+                <p>Estudiante de 3° año</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .medicine {
+        padding-block: var(--section-vertical-space);
+        padding-inline: var(--section-horizontal-space);
+
+        background-color: var(--hue-purple-dark);
+    }
+
+    h1, p {
+        color: var(--hue-purple-light);
+    }
+    h1 {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+</style>

@@ -1,0 +1,29 @@
+---
+---
+
+<form action="#" method="POST">
+    <label for="nombre">
+        <span>Nombre</span>
+        <input type="text" id="nombre" name="nombre"
+               placeholder="Escribe tu nombre" required>
+    </label>
+    <label for="correo">
+        <span>Correo</span>
+        <input type="email" id="correo" name="correo"
+               placeholder="Escribe tu correo" required>
+    </label>
+    <label for="servicio">
+        <span>Servicio</span>
+        <select name="servicio" id="servicio">
+            <option value="1" selected>Servicio 1</option>
+            <option value="2">Servicio 2</option>
+            <option value="3">Servicio 3</option>
+        </select>
+    </label>
+    <label for="mensaje">
+        <span>Mensaje</span>
+        <textarea name="mensaje" id="mensaje" spellcheck="true"
+                  placeholder="Escribe tu mensaje" required></textarea>
+    </label>
+    <button type="submit">Enviar</button>
+</form>
