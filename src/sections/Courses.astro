@@ -1,53 +1,306 @@
 ---
 import BubbleFill from "../components/BubbleFill.astro";
+import WhatsAppIcon from "../svg/WhatsAppIcon.astro";
+import ThunderIcon from "../svg/ThunderIcon.astro";
+import StarIcon from "../svg/StarIcon.astro";
+import HeartIcon from "../svg/HeartIcon.astro";
+import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
 
 ---
+<section class="courses section-space">
+    <hgroup class="flex flex-col flex-gap-s green-light m-bottom">
+        <h1 class="medium"><strong class="medium green">Transformá tu</strong> pasión en una <strong class="medium green">profesión</strong> con salida laboral</h1>
+        <p class="regular l-15">Instructorados y cursos cortos <strong class="regular green">con certificación universitaria</strong> avalada por la UAI para quienes quieren enseñar, capacitar y liderar.</p>
+    </hgroup>
+    
+    <div class="call-to-action p-top">
+        <a class="btn-cta" href="#">
+            <WhatsAppIcon color="--hue-green-dark"/>
+            <strong class="green-dark">¡Pedí info sobre tu curso ideal!</strong>
+        </a>
+        <p class="m-top green-light">Certificación con aval universitario</p>
+        <img class="m-top" src="logos/UAI_logo.png" alt="" srcset="">
+    </div>
 
-<h1>Transformá tu pasión en una profesión con salida laboral</h1>
-<p>Instructorados y cursos cortos con certificación universitaria avalada por la UAI para quienes quieren enseñar, capacitar y liderar.</p>
+    <div class="image-frame space-huge">
+        <img class="rounded w-full" src="webp/estudiantes_006.webp" alt="">
+    </div>
 
-<p>Certificación con aval universitario</p>
-<em>UAI</em>
-<img src="https://images.unsplash.com/photo-1755134148020-f4a1508404e9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-<BubbleFill>
-    <h2>Instructorados</h2>
-</BubbleFill>
-<BubbleFill>
-    <img src="https://www.svgrepo.com/show/535118/accessibility.svg" width="32">
-</BubbleFill>
-<BubbleFill>
-    <img src="https://www.svgrepo.com/show/535118/accessibility.svg" width="32">
-</BubbleFill>
-<BubbleFill>
-    <h3>Fitness</h3>
-</BubbleFill>
-<BubbleFill>
-    <h3>Funcional</h3>
-</BubbleFill>
-<BubbleFill>
-    <img src="https://www.svgrepo.com/show/535118/accessibility.svg" width="32">
-</BubbleFill>
-<BubbleFill>
-    <img src="https://www.svgrepo.com/show/535118/accessibility.svg" width="32">
-</BubbleFill>
-<BubbleFill>
-    <h3>Ritmos</h3>
-</BubbleFill>
-<BubbleFill>
-    <h3>Bungee</h3>
-</BubbleFill>
-<BubbleFill>
-    <img src="https://www.svgrepo.com/show/535118/accessibility.svg" width="32">
-</BubbleFill>
-<BubbleFill>
-    <h3>Columpio</h3>
-</BubbleFill>
-<BubbleFill>
-    <img src="https://www.svgrepo.com/show/535118/accessibility.svg" width="32">
-</BubbleFill>
-<BubbleFill>
-    <h3>Columpio para niños</h3>
-</BubbleFill>
-<BubbleFill>
-    <img src="https://www.svgrepo.com/show/535118/accessibility.svg" width="32">
-</BubbleFill>
+    <!-- INSTRUCTORADOS -->
+    <div class="bubbles flex flex-col space-huge w-full">
+       <header class="flex">
+            <div class="bubble flex-item-center flex-item-75 flex-item-padding h-min">
+                <h2 class="special-subtitle medium green-dark">Instructorados</h2>
+            </div>
+            <div class="bubble flex-item-center flex-item-25 flex-item-padding h-min">
+                <img src="logos/YOGAFUNES_logo.png">
+            </div>
+        </header>
+        <section class="flex">
+           <div class="bubble-line flex-item-center flex-item-25 flex-item-padding h-min">
+               <StarIcon color="--hue-green" size={32}/>
+           </div>
+           <div class="bubble-line flex-item-center flex-item-75 flex-item-padding h-min">
+               <h3 class="special-subtitle medium green">Fitness</h3>
+           </div>
+       </section>
+       <section class="flex">
+            <div class="bubble-line flex-item-center flex-item-75 flex-item-padding h-min">
+                <h3 class="special-subtitle medium green">Funcional</h3>
+            </div>
+            <div class="bubble-line flex-item-center flex-item-25 flex-item-padding h-min">
+                <StarIcon color="--hue-green" size={32}/>
+            </div>
+       </section>
+       <section class="flex">
+           <div class="bubble-line flex-item-center flex-item-25 flex-item-padding h-min">
+               <StarIcon color="--hue-green" size={32}/>
+           </div>
+           <div class="bubble-line flex-item-center flex-item-75 flex-item-padding h-min">
+               <h3 class="special-subtitle medium green">Ritmos</h3>
+           </div>
+       </section>
+       <section class="flex">
+            <div class="bubble-line flex-item-center flex-item-75 flex-item-padding h-min">
+                <h3 class="special-subtitle medium green">Bungee</h3>
+            </div>
+            <div class="bubble-line flex-item-center flex-item-25 flex-item-padding h-min">
+                <StarIcon color="--hue-green" size={32}/>
+            </div>
+       </section>
+       <section class="flex">
+           <div class="bubble-line flex-item-center flex-item-25 flex-item-padding h-min">
+               <StarIcon color="--hue-green" size={32}/>
+            </div>
+            <div class="bubble-line flex-item-center flex-item-75 flex-item-padding h-min">
+                <h3 class="special-subtitle medium green">Columpio</h3>
+            </div>
+       </section>
+       <section class="flex">
+            <div class="bubble-line flex-item-center flex-item-75 flex-item-padding h-min">
+                <h3 class="special-subtitle medium green">Columpio para niños</h3>
+            </div>
+            <div class="bubble-line flex-item-center flex-item-25 flex-item-padding h-min">
+                <StarIcon color="--hue-green" size={32}/>
+            </div>
+       </section>
+    </div>
+
+    <!-- CURSOS CORTOS -->
+    <div class="bubbles flex flex-col space-huge w-full">
+       <header class="flex">
+           <div class="bubble flex-item-center flex-item-25 flex-item-padding h-min">
+               <ThunderIcon color="--hue-green-dark" size={32}/>
+            </div>
+            <div class="bubble flex-item-center flex-item-75 flex-item-padding h-min">
+                <h2 class="special-subtitle medium green-dark">Cursos cortos</h2>
+            </div>
+        </header>
+        <section class="flex">
+            <div class="bubble-line flex-item-center flex-item-75 flex-item-padding h-min">
+                <h3 class="special-subtitle medium green">Masajes</h3>
+            </div>
+            <div class="bubble-line flex-item-center flex-item-25 flex-item-padding h-min">
+                <StarIcon color="--hue-green" size={32}/>
+            </div>
+       </section>
+       <section class="flex">
+           <div class="bubble-line flex-item-center flex-item-25 flex-item-padding h-min">
+               <StarIcon color="--hue-green" size={32}/>
+            </div>
+            <div class="bubble-line flex-item-center flex-item-75 flex-item-padding h-min">
+                <h3 class="special-subtitle medium green">Nutrición deportiva</h3>
+            </div>
+       </section>
+       <section class="flex">
+           <div class="bubble-line flex-item-center flex-item-75 flex-item-padding h-min">
+               <h3 class="special-subtitle medium green">Estética</h3>
+            </div>
+            <div class="bubble-line flex-item-center flex-item-25 flex-item-padding h-min">
+                <StarIcon color="--hue-green" size={32}/>
+            </div>
+       </section>
+    </div>
+
+    <div class="bubbles flex flex-col space-huge w-full">
+       <header class="flex">
+            <div class="bubble flex-item-center flex-item-75 flex-item-padding h-min">
+                <h2 class="special-subtitle medium green-dark">Cursos área salud</h2>
+            </div>
+            <div class="bubble flex-item-center flex-item-25 flex-item-padding h-min">
+                <HeartIcon color="--hue-green-dark" size={52}/>
+            </div>
+        </header>
+        <section class="flex">
+           <div class="bubble-line flex-item-center flex-item-25 flex-item-padding h-min">
+               <StarIcon color="--hue-green" size={32}/>
+           </div>
+           <div class="bubble-line flex-item-center flex-item-75 flex-item-padding h-min">
+               <h3 class="special-subtitle medium green">Venoclosis</h3>
+           </div>
+       </section>
+       <section class="flex">
+            <div class="bubble-line flex-item-center flex-item-75 flex-item-padding h-min">
+                <h3 class="special-subtitle medium green">Signos vitales</h3>
+            </div>
+            <div class="bubble-line flex-item-center flex-item-25 flex-item-padding h-min">
+                <StarIcon color="--hue-green" size={32}/>
+            </div>
+       </section>
+       <section class="flex">
+           <div class="bubble-line flex-item-center flex-item-25 flex-item-padding h-min">
+               <StarIcon color="--hue-green" size={32}/>
+           </div>
+           <div class="bubble-line flex-item-center flex-item-75 flex-item-padding h-min">
+               <h3 class="special-subtitle medium green">Extracción sanguínea</h3>
+           </div>
+       </section>
+       <section class="flex">
+            <div class="bubble-line flex-item-center flex-item-75 flex-item-padding h-min">
+                <h3 class="special-subtitle medium green">Administración de medicamentos</h3>
+            </div>
+            <div class="bubble-line flex-item-center flex-item-25 flex-item-padding h-min">
+                <StarIcon color="--hue-green" size={32}/>
+            </div>
+       </section>
+       <section class="flex">
+           <div class="bubble-line flex-item-center flex-item-25 flex-item-padding h-min">
+               <StarIcon color="--hue-green" size={32}/>
+            </div>
+            <div class="bubble-line flex-item-center flex-item-75 flex-item-padding h-min">
+                <h3 class="special-subtitle medium green">Personal de salud en quirófano</h3>
+            </div>
+       </section>
+    </div>
+
+    <div class="call-to-action space-huge">
+        <div class="flex flex-col flex-gap green-light">
+            <p>¿Tenés dudas?</p>
+            <p>¡Escribinos por WhatsApp!</p>
+        </div>
+        <a class="btn-cta m-block" href="#">
+            <WhatsAppIcon color="--hue-green-dark" />
+            <strong class="regular green-dark">Enviar mensaje</strong>
+        </a>
+
+        <p class="green-light" style="padding-top: var(--element-vertical-space)">También puedes contactarnos por correo</p>
+        <a class="btn-cta m-block" href="#">
+            <EmailLetterIcon color="--hue-green-dark" />
+            <strong class="regular green-dark">Enviar email</strong>
+        </a>
+    </div>
+
+</section>
+
+<style>
+    .courses {
+        background-color: var(--hue-green-dark);
+    }
+    .section-space {
+        padding-block: var(--section-vertical-space);
+        padding-inline: var(--section-horizontal-space);
+    }
+    a {
+        text-decoration: none;
+    }
+    .btn-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--gap-space);
+
+        background-color: var(--hue-green);
+        color: var(--hue-green-light);
+
+        border-radius: var(--rounded);
+
+        padding-block: var(--element-vertical-space);
+        padding-inline: var(--element-horizontal-space);
+    }
+    .btn-cta strong {
+        font-weight: 500;
+        align-self: center;
+    }
+    .bubble {
+        background-color: var(--hue-green);
+        border-radius: var(--rounded);
+    }
+    .bubble-line {
+        border: 1px solid var(--hue-green);
+        border-radius: var(--rounded);
+    }
+    .m-top {
+        margin-top: var(--element-vertical-space);
+    }
+    .m-block {
+        margin-block: var(--element-vertical-space);
+    }
+    .m-bottom {
+        margin-bottom: var(--content-vertical-space);
+    }
+    .p-top {
+        padding-top: var(--gap-space-s);
+    }
+    .flex {
+        display: flex;
+    }
+    .flex-col {
+        flex-direction: column;
+    }
+    .flex-gap {
+        gap: calc(var(--gap-space) + var(--gap-space-s));
+    }
+    .flex-gap-s {
+        gap: var(--gap-space);
+    }
+    .flex-item-center {
+        align-self: stretch;
+        align-content: center;
+        text-align: center;
+    }
+    .flex-item-75 {
+        flex: 4;
+    }
+    .flex-item-25 {
+        flex: 1;
+    }
+    .flex-item-padding {
+        padding: var(--gap-space-lg);
+    }
+    .medium {
+        font-weight: 500;
+    }
+    .regular {
+        font-weight: 400;
+    }
+    .special-subtitle {
+        font-size: 1.625rem;
+    }
+    .space-huge {
+        margin-top: calc( calc(var(--gap-space-lg) * 2) + var(--gap-space) + var(--gap-space-s));
+    }
+    .l-15 {
+        line-height: 1.5;
+    }
+    .green {
+        color: var(--hue-green);
+    }
+    .green-dark {
+        color: var(--hue-green-dark);
+    }
+    .green-light {
+        color: var(--hue-green-light);
+    }
+    .image-frame {
+        overflow: hidden;
+    }
+    .w-full {
+        max-width: 600px;
+        width: 100%;
+    }
+    .h-min {
+        min-height: 100px;
+    }
+    .rounded {
+        border-radius: var(--rounded);
+    }
+</style>
