@@ -1,0 +1,34 @@
+---
+interface Props {
+    Flag: any;
+    MinorFlag: any;
+}
+
+
+const {Flag, MinorFlag} = Astro.props
+---
+
+<div class="flag-country">
+    <Flag size={32} />
+    <div class="white-circle">
+        <MinorFlag size={20}/>
+    </div>
+</div>
+
+<style>
+    .flag-country {
+        position: relative;
+        display: inline-block;
+    }
+
+    .white-circle {
+        position: absolute;
+        top: 4px;
+        left: 100%;
+        transform: translate(-50%, -50%);
+        /* clip-path: circle(30% at center); */
+        clip-path: circle(25% at 17px 16px);
+        background: #009B3A;
+        padding: 0.5rem;
+    }
+</style>

@@ -1,56 +1,353 @@
 ---
+import FlagWith from "../components/FlagWith.astro";
+import ArgentinaIcon from "../svg/ArgentinaIcon.astro";
+import ParaguayIcon from "../svg/ParaguayIcon.astro";
+import BrazilIcon from "../svg/BrazilIcon.astro";
+import ClockIcon from "../svg/ClockIcon.astro";
+import BookIcon from "../svg/BookIcon.astro";
+import CheckIcon from "../svg/CheckIcon.astro";
+import LaptopIcon from "../svg/LaptopIcon.astro";
+import StreamingIcon from "../svg/StreamingIcon.astro";
+import WhatsAppIcon from "../svg/WhatsAppIcon.astro";
+import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
 ---
 
-<h2>Aprende español con un enfoque cultural y personalizado</h2>
-<div>
-    <p>Indícanos tu país de residencia y avanza
-con flexibilidad</p>
-    <button>Argentina</button>
-    <button>Paraguay</button>
-</div>
+<section class="language section-space">
+    <hgroup class="flex flex-col flex-gap-s red-light m-bottom">
+        <h2 class="title medium"><strong class="red medium">Aprende español</strong> con un enfoque cultural y personalizado</h2>
+        <p class="regular l-15">Indícanos tu país de residencia y <strong class="red regular">avanza
+            con flexibilidad</strong></p>
+        <div class="flex">
+            <button class="btn-country argentina flex flex-gap flex-align">
+                Argentina
+                <FlagWith Flag={ArgentinaIcon} MinorFlag={BrazilIcon} />
+            </button>
+            <button class="btn-country paraguay flex flex-gap flex-align">
+                Paraguay
+                <FlagWith Flag={ParaguayIcon} MinorFlag={BrazilIcon} />
+            </button>
+        </div>
+    </hgroup>
 
 <div class="tier-by-country argentina">
-    <p>ARG (BRZ)</p>
-    <p>Certificación en:</p>
-    <div>
-        <em>DELE</em>
-        <em>SIELE</em>
+
+    <div class="flex">
+        <div class="bubble flex-item-25 corner-bottom-right relative">
+            <div class="bubble-white h-full flex-align flex-justify">
+                <ArgentinaIcon size={36} />
+            </div>
+            <div class="white-circle">
+                    <BrazilIcon size={32} />
+            </div>
+        </div>
+
+        <div class="bubble flex-item-75 corner-bottom-left corner-bottom-right">
+            <div class="bubble-white flex-gap-lg">
+                <p>Certificación en:</p>
+                <div class="flex flex-gap">
+                    <img src="logos/DELE_logo.png" alt="" srcset="">
+                    <img src="logos/SIELE_logo.png" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="bubble corner-bottom-left corner-top-right">
+        <h4 class="subtitle medium">Preparación para SIELE y DUCLE</h4>
+        <p class="bubble-white">
+            <strong class="flex flex-align flex-gap-s regular">
+                <BookIcon color="--hue-red-dark" size={24} />
+                Niveles A1 a C1 con enfoque comunicativo y cultural.
+            </strong>
+        </p>
     </div>
 
-    <h4>Preparación para SIELE y DUCLE</h4>
-    <p>Niveles A1 a C1 con enfoque comunicativo y cultural.</p>
-
-    <h4>Cursos de español general y especializado</h4>
-    <p>Simulacros, corrección personalizada y estrategias de examen.</p>
-
-    <h4>Exámenes SIELE</h4>
-    <p>Rendí en nuestras instalaciones con supervisores certificados.</p>
-
-    <h4>Plataforma exclusiva</h4>
-    <p>Videos explicativos sobre todos los temas y ejercicios de práctica extra con autocorrección, además de materiales para practicar la comprensión auditiva y de lectura.</p>
-
+    <div class="bubble corner-top-left corner-bottom-right">
+        <h4 class="subtitle medium">Cursos de español general y especializado</h4>
+        <p class="bubble-white">
+            <strong class="flex flex-align flex-gap-s regular">
+                <ClockIcon color="--hue-red-dark" size={24} />
+                Simulacros, corrección personalizada y estrategias de examen.
+            </strong>
+        </p>
+    </div>
+    <div class="bubble corner-top-right corner-bottom-left">
+        <h4 class="subtitle medium">Exámenes SIELE</h4>
+        <p class="bubble-white">
+            <strong class="flex flex-align flex-gap-s regular">
+                <CheckIcon color="--hue-red-dark" size={24} />
+                Rendí en nuestras instalaciones con supervisores certificados.
+            </strong>
+        </p>
+    </div>
+    <div class="bubble corner-top-left">
+        <h4 class="subtitle medium">Plataforma exclusiva</h4>
+        <p class="bubble-white">
+            <strong class="flex flex-align flex-gap-s regular">
+                <LaptopIcon color="--hue-red-dark" size={64} />
+                Videos explicativos sobre todos los temas y ejercicios de práctica extra con autocorrección, además de materiales para practicar la comprensión auditiva y de lectura.
+            </strong>
+        </p>
+    </div>
 
 </div>
+
 <div class="tier-by-country paraguay">
-    <p>HAIZEA (PAY)</p>
-    <p>Certificación en:</p>
-    <div>
-        <em>SIELE</em>
-        <em>CELE</em>
+
+    <div class="flex">
+        <div class="bubble flex-item-25 corner-bottom-right relative">
+            <div class="bubble-white h-full flex-align flex-justify">
+                <img src="logos/HAIZEA_logo.svg" alt="">
+            </div>
+        </div>
+
+        <div class="bubble flex-item-75 corner-bottom-left corner-bottom-right">
+            <div class="bubble-white flex-gap-lg">
+                <p>Certificación en:</p>
+                <div class="flex flex-gap">
+                    <img src="logos/SIELE_logo.png" alt="" srcset="">
+                    <img src="logos/CELE_logo.png" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="bubble corner-bottom-left corner-top-right">
+        <h4 class="subtitle medium">Cursos virtuales con seguimiento personalizado</h4>
+        <p class="bubble-white">
+            <strong class="flex flex-align flex-gap-s regular">
+                <BookIcon color="--hue-red-dark" size={24} />
+                Planificación adaptada a tu horario y nivel.
+            </strong>
+        </p>
     </div>
 
-    <h4>Cursos virtuales con seguimiento personalizado</h4>
-    <p>Planificación adaptada a tu horario y nivel.</p>
+    <div class="bubble corner-top-left corner-bottom-right">
+        <h4 class="subtitle medium">Preparación para SIELE y DUCLE</h4>
+        <p class="bubble-white">
+            <strong class="flex flex-align flex-gap-s regular">
+                <ClockIcon color="--hue-red-dark" size={24} />
+                Simulacros oficiales, corrección detallada.
+            </strong>
+        </p>
+    </div>
+    <div class="bubble corner-bottom-left corner-top-right corner-bottom-right">
+        <h4 class="subtitle medium">Exámenes SIELE</h4>
+        <p class="bubble-white">
+            <strong class="flex flex-align flex-gap-s regular">
+                <CheckIcon color="--hue-red-dark" size={24} />
+                Rendí en nuestras instalaciones con supervisores certificados.
+            </strong>
+        </p>
+    </div>
+    <div class="bubble corner-top-right corner-bottom-left corner-top-left">
+        <h4 class="subtitle medium">Clases en vivo con profesores nativos</h4>
+        <p class="bubble-white">
+            <strong class="flex flex-align flex-gap-s regular">
+                <StreamingIcon color="--hue-red-dark" size={24} />
+                Interacción real, práctica constante y feedback inmediato.
+            </strong>
+        </p>
+    </div>
 
-    <h4>Preparación para SIELE y DUCLE</h4>
-    <p>Niveles A1 a C1 con enfoque comunicativo y cultural.</p>
-
-    <h4>Exámenes SIELE </h4>
-    <p>Simulacros oficiales y corrección detallada.</p>
-
-    <h4>Clases en vivo con profesores nativos</h4>
-    <p>Interacción real, práctica constante y feedback inmediato.</p>
-
-    <h4>Plataforma exclusiva</h4>
-    <p>Videos explicativos sobre todos los temas y ejercicios de práctica extra con autocorrección, además de materiales para practicar la comprensión auditiva y de lectura.</p>
+    <div class="bubble corner-top-left">
+        <h4 class="subtitle medium">Plataforma exclusiva</h4>
+        <p class="bubble-white">
+            <strong class="flex flex-align flex-gap-s regular">
+                <LaptopIcon color="--hue-red-dark" size={64} />
+                Videos explicativos sobre todos los temas y ejercicios de práctica extra con autocorrección, además de materiales para practicar la comprensión auditiva y de lectura.
+            </strong>
+        </p>
+    </div>
 </div>
+
+<div class="call-to-action space-huge">
+        <div class="flex flex-col flex-gap red-light">
+            <p>¿Tenés dudas?</p>
+            <p>¡Escribinos por WhatsApp!</p>
+        </div>
+        <a class="btn-cta m-block" href="#">
+            <WhatsAppIcon color="--hue-red-dark" />
+            <strong class="regular red-dark">Enviar mensaje</strong>
+        </a>
+
+        <p class="red-light" style="padding-top: var(--element-vertical-space)">También puedes contactarnos por correo</p>
+        <a class="btn-cta m-block" href="#">
+            <EmailLetterIcon color="--hue-red-dark" />
+            <strong class="regular red-dark">Enviar email</strong>
+        </a>
+</div>
+
+</section>
+
+<style>
+    .language {
+        background-color: var(--hue-red-dark);
+    }
+    .section-space {
+        padding-block: var(--section-vertical-space);
+        padding-inline: var(--section-horizontal-space);
+    }
+    .medium {
+        font-weight: 500;
+    }
+    .regular {
+        font-weight: 400;
+    }
+    .l-15 {
+        line-height: 1.5;
+    }
+    .title {
+        font-size: var(--title);
+    }
+    .subtitle {
+        font-size: var(--subtitle);
+    }
+    .red {
+        color: var(--hue-red)
+    }
+    .red-light {
+        color: var(--hue-red-light)
+    }
+    .red-dark {
+        color: var(--hue-red-dark)
+    }
+    .flex {
+        display: flex;
+    }
+    .flex-col {
+        flex-direction: column;
+    }
+    .flex-align {
+        align-items: center;
+    }
+    .flex-gap {
+        gap: calc(var(--gap-space) + var(--gap-space-s));
+    }
+    .flex-gap-s {
+        gap: var(--gap-space);
+    }
+    .flex-item-center {
+        align-self: stretch;
+        align-content: center;
+        text-align: center;
+    }
+    .flex-item-75 {
+        flex: 4;
+    }
+    .flex-item-25 {
+        flex: 1;
+    }
+    .m-bottom {
+        margin-bottom: var(--content-vertical-space);
+    }
+
+    .btn-country {
+        background-color: transparent;
+        border: 1px solid var(--hue-red);
+        border-radius: var(--rounded);
+        color: var(--hue-red);
+        cursor: pointer;
+        font-size: var(--body);
+        padding-block: var(--element-vertical-space);
+        padding-inline: var(--element-horizontal-space);
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .btn-country:hover {
+        background-color: var(--hue-red);
+        color: var(--hue-red-dark);
+    }
+    .btn-country.argentina {
+        border-radius: var(--rounded) 0 var(--rounded) var(--rounded);
+    }
+    .btn-country.paraguay {
+        border-radius: 0 var(--rounded) var(--rounded) var(--rounded);
+    }
+
+    .bubble {
+        background-color: var(--hue-red);
+        border-radius: var(--rounded);
+        color: var(--hue-red-dark);
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-space);
+        padding-block: calc(var(--element-horizontal-space) * 1.5);
+        padding-inline: var(--element-horizontal-space)
+    }
+
+    .bubble-white {
+        background-color: white;
+        border-radius: var(--rounded);
+        color: var(--hue-red-dark);
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-space-s);
+        padding: var(--element-vertical-space) var(--element-horizontal-space);
+    }
+    .flex-gap-lg {
+        gap: var(--gap-space-lg);
+    }
+    .corner-top-left {
+        border-top-left-radius: 0;
+    }
+    .corner-top-right {
+        border-top-right-radius: 0;
+    }
+    .corner-bottom-left {
+        border-bottom-left-radius: 0;
+    }
+    .corner-bottom-right {
+        border-bottom-right-radius: 0;
+    }
+    .h-full {
+        height: 100%;
+    }
+    .flex-justify {
+        justify-content: center;
+    }
+
+    .white-circle {
+        position: absolute;
+        top: 32px;
+        left: 85%;
+        transform: translate(-50%, -50%);
+        clip-path: circle(30% at 24px 22px);
+        /* clip-path: circle(30% at 14px 19px); */
+        background: #009B3A;
+        padding: 0.5rem;
+    }
+    .relative {
+        position: relative;
+    }
+
+    .tier-by-country {
+        max-width: 600px;
+        width: 100%;
+        margin-block: calc(var(--content-vertical-space) * 2);
+    }
+
+    a {
+        text-decoration: none;
+    }
+    .btn-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--gap-space);
+
+        background-color: var(--hue-red);
+        color: var(--hue-red-light);
+
+        border-radius: var(--rounded);
+
+        padding-block: var(--element-vertical-space);
+        padding-inline: var(--element-horizontal-space);
+    }
+    .btn-cta strong {
+        font-weight: 500;
+        align-self: center;
+    }
+
+    .m-block {
+        margin-block: var(--element-vertical-space);
+    }
+</style>
