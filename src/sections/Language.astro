@@ -29,7 +29,7 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
         </div>
     </hgroup>
 
-<div class="tier-by-country argentina">
+<div class="tier-by-country argentina content-space">
 
     <div class="flex">
         <div class="bubble flex-item-25 corner-bottom-right relative">
@@ -92,7 +92,7 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
 
 </div>
 
-<div class="tier-by-country paraguay">
+<div class="tier-by-country paraguay content-space">
 
     <div class="flex">
         <div class="bubble flex-item-25 corner-bottom-right relative">
@@ -347,6 +347,9 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
         align-self: center;
     }
 
+    .content-space {
+        margin-block: var(--content-vertical-space);
+    }
     .m-block {
         margin-block: var(--element-vertical-space);
     }

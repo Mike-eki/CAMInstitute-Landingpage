@@ -3,11 +3,123 @@ import Form from "../components/Form.astro"
 
 ---
 
-<h2>Nuestra promesa: acompañamiento que marca la diferencia</h2>
+<section class="contact section-space f-white flex flex-col flex-content-space">
 
-<p>“En Instituto CAM no creemos en el estudio aislado, sino en el crecimiento con guía. Donde el esfuerzo de un estudiante se encuentra con el acompañamiento que merece.”</p>
-<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-<p>Lucía Roca</p>
-<p>Directora</p>
+    <hgroup>
+        <h2 class="title medium">Nuestra promesa: <strong class="medium f-blue">acompañamiento que marca la diferencia</strong></h2>
+    </hgroup>
+    
+    <div class="flex w-full">
+        <div class="bubble flex">
+            <q class="quote regular body f-white flex-item-center">En <strong class="regular f-blue-light">Instituto CAM</strong> no <strong class="regular f-blue-light">creemos</strong> en el estudio aislado, sino <strong class="regular f-blue-light">en el crecimiento</strong> con guía. Donde el esfuerzo <strong class="regular f-blue-light">de un estudiante</strong> se encuentra <strong class="regular f-blue-light">con el acompañamiento que merece.</strong></q>
+        </div>
+        <div class="flex flex-col">
+            <div class="image-frame">
+                <img class="image rounded corner-bottom-left" src="webp/directora_lucia_roca_recorte.webp" alt="">
+            </div>
+            <div class="bubble corner-top-left text-center">
+                <p class="f-blue-light body medium">Lucía Roca</p>
+                <small>Directora</small>
+            </div>
+        </div>
+    </div>
 
-<Form />
+    <hgroup>
+        <h2 class="subtitle medium">Confía en quienes creen en tu éxito. <strong class="medium f-blue-light">¡Contáctanos!</strong></h2>
+    </hgroup>
+
+    <Form />
+</section>
+
+<style>
+    .contact {
+        background-color: var(--hue-blue-dark);
+    }
+    .section-space {
+        padding-block: var(--section-vertical-space);
+        padding-inline: var(--section-horizontal-space);
+    }
+    .title {
+        font-size: var(--title);
+    }
+    .f-white {
+        color: var(--hue-white);
+    }
+    .f-blue {
+        color: var(--hue-blue);
+    }
+    .f-blue-light {
+        color: var(--hue-blue-light);
+    }
+    .medium {
+        font-weight: 500;
+    }
+    .regular {
+        font-weight: 400;
+    }
+    .body {
+        font-size: calc(var(--body) * 1.125);
+    }
+
+    .bubble {
+        background-color: var(--hue-blue);
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 16px;
+        
+    }
+
+    .rounded {
+        border-radius: var(--rounded);
+    }
+    .corner-top-left {
+        border-top-left-radius: 0;
+    }
+    .corner-top-right {
+        border-top-right-radius: 0;
+    }
+    .corner-bottom-left {
+        border-bottom-left-radius: 0;
+    }
+    .corner-bottom-right {
+        border-bottom-right-radius: 0;
+    }
+
+    .flex {
+        display: flex;
+    }
+    .flex-col {
+        flex-direction: column;
+    }
+    .flex-item-center {
+        align-self: stretch;
+        align-content: center;
+    }
+    .flex-content-space {
+        gap: calc(var(--gap-space-lg) * 2);
+    }
+
+    .w-full {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .quote {
+        line-height: 1.7;
+    }
+
+    .image {
+        display: block;
+        max-width: 240px;
+        aspect-ratio: 9 / 12;
+        object-fit: cover;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: calc(var(--subtitle) * 1.125);
+    }
+</style>

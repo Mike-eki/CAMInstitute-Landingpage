@@ -1,29 +1,104 @@
 ---
 ---
 
-<form action="#" method="POST">
-    <label for="nombre">
-        <span>Nombre</span>
-        <input type="text" id="nombre" name="nombre"
+<form class="w-full flex flex-col" action="#" method="POST">
+    <label class="bg-blue content-space rounded flex flex-col flex-gap-s" for="nombre">
+        <span class="f-blue-light">Nombre</span>
+        <input class="element-space rounded" type="text" id="nombre" name="nombre"
                placeholder="Escribe tu nombre" required>
     </label>
-    <label for="correo">
-        <span>Correo</span>
-        <input type="email" id="correo" name="correo"
+    <label class="bg-blue content-space rounded flex flex-col flex-gap-s" for="correo">
+        <span class="f-blue-light">Correo</span>
+        <input class="element-space rounded" type="email" id="correo" name="correo"
                placeholder="Escribe tu correo" required>
     </label>
-    <label for="servicio">
-        <span>Servicio</span>
-        <select name="servicio" id="servicio">
-            <option value="1" selected>Servicio 1</option>
-            <option value="2">Servicio 2</option>
-            <option value="3">Servicio 3</option>
+    <label class="bg-blue content-space rounded flex flex-col flex-gap-s" for="servicio">
+        <span class="f-blue-light">Servicio</span>
+        <select class="element-space rounded" name="servicio" id="servicio" required>
+            <option value="1" selected>Clases de apoyo de medicina</option>
+            <option value="2">Capacitaciones y cursos</option>
+            <option value="3">Aprender español</option>
         </select>
     </label>
-    <label for="mensaje">
-        <span>Mensaje</span>
-        <textarea name="mensaje" id="mensaje" spellcheck="true"
+    <label class="bg-blue content-space rounded flex flex-col flex-gap-s" for="mensaje">
+        <span class="f-blue-light">Mensaje</span>
+        <textarea class="element-space rounded" name="mensaje" id="mensaje" spellcheck="true"
                   placeholder="Escribe tu mensaje" required></textarea>
     </label>
-    <button type="submit">Enviar</button>
+    <footer class="bg-blue content-space rounded">
+        <button class="w-fill element-space rounded" type="submit">Enviar</button>
+    </footer>
 </form>
+
+<style>
+    .bg-blue {
+        background-color: var(--hue-blue);
+    }
+    .content-space {
+        padding-block: var(--content-vertical-space);
+        padding-inline: calc(var(--content-horizontal-space) * 1.5);
+    }
+    .rounded {
+        border-radius: var(--rounded);
+    }
+    .w-full {
+        max-width: 600px;
+        width: 100%;
+    }
+    .w-fill {
+        width: 100%;
+    }
+    .f-blue-light {
+        color: var(--hue-blue-light);
+    }
+
+    .element-space {
+        padding-block: var(--element-vertical-space);
+        padding-inline: var(--element-horizontal-space);
+    }
+
+    .flex {
+        display: flex;
+    }
+    .flex-col {
+        flex-direction: column;
+    }
+    .flex-align {
+        align-items: center;
+    }
+    .flex-gap {
+        gap: calc(var(--gap-space) + var(--gap-space-s));
+    }
+    .flex-gap-s {
+        gap: var(--gap-space-s);
+    }
+
+    input, textarea, select {
+        border: 1px solid #d2d2d2;
+    }
+    input::placeholder,
+    textarea::placeholder,
+    select::placeholder {
+        color: #d2d2d2;
+    }
+    textarea {
+        resize: vertical;
+        field-sizing: content;
+        min-height: 4rem;
+    }
+    button {
+        background-color: var(--hue-blue-light);
+        color: var(--hue-blue-dark);
+        font-size: var(--body);
+        min-height: 2rem;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+        transition: outline 0.3s ease-in;
+    }
+    button:hover {
+        outline: 2px solid var(--hue-blue-dark);
+        /* background-color: var(--hue-blue-dark);
+        color: var(--hue-blue-light); */
+    }
+</style>
