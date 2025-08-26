@@ -1,0 +1,341 @@
+---
+import Card from "../components/Card.astro";
+import CheckIcon from "../svg/CheckIcon.astro";
+---
+
+<div class="scroll-layout">
+  <div class="carousel">
+    <ul class="content">
+        <article class="card">
+            <picture class="image-frame">
+                <!-- <source srcset="test.avif"> Multiples imagenes con varios formatos-->
+                <img src="webp/estudiantes_007.webp" alt="test">
+            </picture>
+            <section class="text-content">
+                <hgroup>
+                    <h2>Tu carrera necesita ritmo, no caos</h2>
+                    <hr>
+                </hgroup>
+                <ul>
+                    <li>
+                        <span><CheckIcon color="--hue-purple-light" /></span>
+                        Evaluación inicial y planificación por materia
+                    </li>
+                    <li>
+                        <span><CheckIcon color="--hue-purple-light" /></span>
+                        Ajustamos el plan según tu ritmo y dificultades
+                    </li>
+                    <li>
+                        <span><CheckIcon color="--hue-purple-light" /></span>
+                        Te preparamos para cada parcial con estrategia y calma
+                    </li>
+                    <li>
+                        <span><CheckIcon color="--hue-purple-light" /></span>
+                        Apoyo para parciales, trabajos prácticos y cursadas
+                    </li>
+                </ul>
+            </section>
+        </article>
+        <article class="card">
+            <picture class="image-frame">
+                <!-- <source srcset="test.avif"> Multiples imagenes con varios formatos-->
+                <img src="webp/estudiantes_008.webp" alt="test">
+            </picture>
+            <section class="text-content">
+                <hgroup>
+                    <h2>Prepárate para el final con quien conoce tu carrera</h2>
+                    <hr>
+                </hgroup>
+                <ul>
+                    <li><span><CheckIcon color="--hue-purple-light" /></span>Enfocados en lo que realmente entra</li>
+                    <li><span><CheckIcon color="--hue-purple-light" /></span>Clases de consulta y simulacros de exámenes orales</li>
+                    <li><span><CheckIcon color="--hue-purple-light" /></span>Resolución de casos clínicos y ejercicios</li>
+                    <li><span><CheckIcon color="--hue-purple-light" /></span>Modalidad presencial o virtual, según tu necesidad</li>
+                </ul>
+            </section>
+        </article>
+        <article class="card">
+            <picture class="image-frame">
+                <!-- <source srcset="test.avif"> Multiples imagenes con varios formatos-->
+                <img src="webp/remoto-virtual.webp" alt="test">
+            </picture>
+            <section class="text-content">
+                <hgroup>
+                    <h2>Estudio organizado, en cualquier momento y desde cualquier lugar</h2>
+                    <hr>
+                </hgroup>
+                <ul>
+                    <li><span><CheckIcon color="--hue-purple-light" /></span>Plataforma virtual con videos que complementan las clases</li>
+                    <li><span><CheckIcon color="--hue-purple-light" /></span>Material descargable y actualizado</li>
+                    <li><span><CheckIcon color="--hue-purple-light" /></span>Las clases que se dictan presenciales también se dan de manera virtual con profe en vivo.</li>
+                </ul>
+            </section>
+        </article>
+        <article class="card">
+            <picture class="image-frame">
+                <!-- <source srcset="test.avif"> Multiples imagenes con varios formatos-->
+                <img src="webp/estudiantes_009.webp" alt="test">
+            </picture>
+            <section class="text-content">
+                <hgroup>
+                    <h2>Evaluá tu nivel y resolvé tus dudas con expertos</h2>
+                    <hr>
+                </hgroup>
+                <ul>
+                    <li><span><CheckIcon color="--hue-purple-light" /></span>Simulacros tipo parcial y final</li>
+                    <li><span><CheckIcon color="--hue-purple-light" /></span>Corrección con comentarios</li>
+                    <li><span><CheckIcon color="--hue-purple-light" /></span>Consultas ilimitadas durante tu cursado</li>
+                    <li><span><CheckIcon color="--hue-purple-light" /></span>Check list, lluvias de ideas, mapas mentales, integradores y clases de consultas</li>
+                </ul>
+            </section>
+        </article>
+        <article class="card">
+            <picture class="image-frame">
+                <!-- <source srcset="test.avif"> Multiples imagenes con varios formatos-->
+                <img src="webp/donde-quieras.webp" alt="test">
+            </picture>
+            <section class="text-content">
+                <hgroup>
+                    <h2>Clases cuando y donde las necesitás</h2>
+                    <hr>
+                </hgroup>
+                <ul>
+                    <li><span><CheckIcon color="--hue-purple-light" /></span>Grupos reducidos y dinámicos</li>
+                    <li><span><CheckIcon color="--hue-purple-light" /></span>Docentes especializados en cada materia</li>
+                    <li><span><CheckIcon color="--hue-purple-light" /></span>Adapta tu formato de estudios según prefieras.</li>
+                </ul>
+            </section>
+        </article>
+    </ul>
+  </div>
+</div>
+
+<style>
+
+/* SCROLLER */
+/* horizontal scroll snap */
+.carousel {
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+  
+  /* snap to start */  
+  & .card {
+    scroll-snap-align: start;
+  }
+}
+
+
+/* SCROLL BUTTONS */
+/* create buttons by selecting them and adding content */
+.carousel {
+  &::scroll-button(*) {
+    /* make them round and easy to press */
+    inline-size: 48px;
+    aspect-ratio: 1;
+    border-radius: 1e3px;
+    border: 2px solid rgba(153, 153, 153, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
+    
+    /* space from content */
+    margin: 5px;
+  }
+  
+  &::scroll-button(*):focus-visible {
+    outline-offset: 5px;
+  }
+  
+  &::scroll-button(*):not(:disabled):is(:hover, :active) {
+    background-color: rgba(255, 255, 255);
+  }
+  
+  &::scroll-button(*):not(:disabled):active {
+    scale: 90%;
+  }
+
+  &::scroll-button(*):is(:disabled) {
+    display: none;
+  }
+  
+  
+  &::scroll-button(left) {
+    position: absolute;
+    top: 30%;
+    transform: translate(0, 50%);
+    content: "⬅" / "Scroll Left";
+    /* grid-area: center; place markers in parent grid area */
+  }
+  
+  &::scroll-button(right) {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    transform: translate(0, 50%);
+    content: "⮕" / "Scroll Right";
+    /* grid-area: right; */
+  }
+}
+
+
+
+
+/* SCROLL MARKERS */
+/* create marker group */
+/* create markers for each item */
+.carousel {
+  /* create markers 'after' scroller */
+  scroll-marker-group: after;
+
+  /* create markers container and own dots layout */
+  &::scroll-marker-group {
+    grid-area: markers; /* place markers in parent grid area */
+    
+    /* 15px by 15px horizontal grid - size of dots */
+    display: grid;
+    place-content: safe center;
+    grid: 30px / auto-flow 30px;
+    gap: 15px;
+    padding: 15px;
+    scroll-padding: 15px;
+    
+    /* handle overflow */
+    overflow: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* a marker for each <li> */
+  & > .content > .card {
+    /* create by adding content */
+    &::scroll-marker {
+      content: " "; /* empty content is fine, just like ::before */
+      
+      /* style it as you need */
+      width: 1.5rem;
+      aspect-ratio: 1;
+      background-color: var(--hue-purple-light);
+      border-radius: 50%;
+      outline-offset: 4px;
+      -webkit-tap-highlight-color: transparent;
+      
+      /* snap if group is overflowing */
+      scroll-snap-align: center;
+    }
+    
+    &::scroll-marker:is(:hover, :focus-visible) {
+      border-color: LinkText;
+    }
+    
+    &::scroll-marker:target-current {
+      background: var(--hue-purple);
+      border-color: LinkText;
+    }
+  }
+}
+
+
+  
+  .scroll-layout {
+    position: relative;
+    display: grid;
+/*     border: 1px dashed gray; */
+    
+    /* try a different layout =) */
+    grid-template-areas: 
+      "left scroll right"
+      ". markers .";
+    
+    /* just place items in the grid */
+    grid-template-areas: 
+      "scroll scroll scroll"
+      "left markers right";
+    
+    grid-template-columns: auto 1fr auto;
+
+    .carousel {
+      grid-area: scroll;
+    }
+  }
+  
+  .carousel {
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: nowrap;
+    /* grid: 50vmin / auto-flow 50vmin; */
+    gap: var(--element-horizontal-space);
+    padding: 0;
+    margin: 0;
+
+    /* > li {
+      list-style-type: none;
+      border: 3px solid #888;
+    } */
+  }
+
+
+
+.card {
+    width: 300px;
+    /* background-color: lightblue; */
+    border-radius: 1.25rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.image-frame {
+    display: block;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    aspect-ratio: 12/9;
+}
+.image-frame img, .image-frame source {
+    display: block;
+    max-width: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+.text-content {
+    padding-block: calc(var(--content-vertical-space) * 1.25);
+    padding-inline: calc(var(--content-horizontal-space) * 1.5);
+    border-radius: 1.25rem;
+    background-color: var(--hue-purple);
+    flex: 1;
+    height: webkit-fill-available;
+}
+.text-content ul {
+    padding: 0;
+}
+hr {
+    border: none;
+    border-top: 2px solid var(--hue-purple-dark);
+    margin: calc(var(--element-vertical-space) * 1.25) 0;
+}
+h2 {
+    font-weight: 500;
+}
+.text-content ul li {
+    list-style: none;
+    margin-block: calc(var(--element-vertical-space) * 1.25);
+    display: flex;
+    align-items: center;
+    gap: calc(var(--element-horizontal-space) / 2);
+
+    font-weight: 400;
+    font-size: var(--body);
+    line-height: 1.5;
+}
+
+</style>

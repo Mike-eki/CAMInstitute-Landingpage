@@ -5,13 +5,13 @@
     <a href="#">
         <img src="logos/cam_logo.svg" alt="" srcset="">
     </a>
-    <ul>
+    <ul class="bubble">
         <li><a href="#medicina">Medicina</a></li>
         <li><a href="#capacitacion">Capacitación</a></li>
         <li><a href="#idiomas">Idiomas</a></li>
         <li><a href="#contacto">Contacto</a></li>
     </ul>
-     <menu> <!-- client:media="(max-width: 768px)" -->
+     <menu class="hide"> <!-- client:media="(max-width: 768px)" -->
         <img src="icons/icon_menu.svg" alt="" srcset="">
     </menu>
 </nav>
@@ -28,16 +28,32 @@
     ul {
         display: flex;
         list-style: none;
-        gap: 1rem;
+        padding: 0;
     }
 
     a {
+        display: inline-block;
+        padding-block: var(--element-vertical-space);
+        padding-inline: var(--content-horizontal-space);
         color: var(--hue-white);
+        border-radius: var(--rounded);
         text-decoration: none;
+        font-weight: 500;
     }
 
     a:hover {
-        text-decoration: underline;
+        /* text-decoration: underline; */
+        background-color: var(--hue-purple-light);
+        color: var(--hue-purple-dark);
+    }
+
+    .bubble {
+        border-radius: var(--rounded);
+        outline: 1px solid var(--hue-purple-light);
+    }
+
+    .hide {
+        display: none;
     }
 
 </style>
