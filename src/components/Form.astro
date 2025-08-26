@@ -2,17 +2,17 @@
 ---
 
 <form class="w-full flex flex-col" action="#" method="POST">
-    <label class="bg-blue content-space rounded flex flex-col flex-gap-s" for="nombre">
+    <label class="bg-blue content-space rounded flex flex-col flex-gap-s corner-bottom-left corner-bottom-right" for="nombre">
         <span class="f-blue-light">Nombre</span>
         <input class="element-space rounded" type="text" id="nombre" name="nombre"
                placeholder="Escribe tu nombre" required>
     </label>
-    <label class="bg-blue content-space rounded flex flex-col flex-gap-s" for="correo">
+    <label class="bg-blue content-space rounded flex flex-col flex-gap-s corner-top-left corner-bottom-left corner-bottom-left corner-top-right" for="correo">
         <span class="f-blue-light">Correo</span>
         <input class="element-space rounded" type="email" id="correo" name="correo"
                placeholder="Escribe tu correo" required>
     </label>
-    <label class="bg-blue content-space rounded flex flex-col flex-gap-s" for="servicio">
+    <label class="bg-blue content-space rounded flex flex-col flex-gap-s corner-top-left corner-bottom-right" for="servicio">
         <span class="f-blue-light">Servicio</span>
         <select class="element-space rounded" name="servicio" id="servicio" required>
             <option value="1" selected>Clases de apoyo de medicina</option>
@@ -20,12 +20,12 @@
             <option value="3">Aprender español</option>
         </select>
     </label>
-    <label class="bg-blue content-space rounded flex flex-col flex-gap-s" for="mensaje">
+    <label class="bg-blue content-space rounded flex flex-col flex-gap-s corner-top-right corner-bottom-left corner-bottom-right" for="mensaje">
         <span class="f-blue-light">Mensaje</span>
         <textarea class="element-space rounded" name="mensaje" id="mensaje" spellcheck="true"
                   placeholder="Escribe tu mensaje" required></textarea>
     </label>
-    <footer class="bg-blue content-space rounded">
+    <footer class="bg-blue content-space rounded corner-top-right corner-top-left">
         <button class="w-fill element-space rounded" type="submit">Enviar</button>
     </footer>
 </form>
@@ -40,6 +40,18 @@
     }
     .rounded {
         border-radius: var(--rounded);
+    }
+    .corner-top-left {
+        border-top-left-radius: 0;
+    }
+    .corner-top-right {
+        border-top-right-radius: 0;
+    }
+    .corner-bottom-left {
+        border-bottom-left-radius: 0;
+    }
+    .corner-bottom-right {
+        border-bottom-right-radius: 0;
     }
     .w-full {
         max-width: 600px;

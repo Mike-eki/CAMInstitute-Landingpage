@@ -1,36 +1,147 @@
+---
+import WhatsAppIcon from "../svg/WhatsAppIcon.astro"
+import FacebookIcon from "../svg/FacebookIcon.astro"
+import InstagramIcon from "../svg/InstagramIcon.astro"
+import YoutubeIcon from "../svg/YoutubeIcon.astro"
+import TiktokIcon from "../svg/TiktokIcon.astro"
+import CamLogo from "../svg/CamLogo.astro"
+import PinIcon from "../svg/PinIcon.astro"
+import MapIcon from "../svg/MapIcon.astro"
+import ScheduleIcon from "../svg/ScheduleIcon.astro"
+import ClockIcon from "../svg/ClockIcon.astro"
+import EmailSymbolIcon from "../svg/EmailSymbolIcon.astro"
 
+---
 
-<footer>
-    <img src="cam_logo.svg" alt="">
-    <ul>
-        <li>WhatsApp</li>
-        <li>Facebook</li>
-        <li>Instagram</li>
-        <li>Youtube</li>
-        <li>Tiktok</li>
-    </ul>
-
-    <p>Contamos con más de 15 años de experiencia brindando cursos personalizados de Clases de Apoyo, Medicina e Idiomas. Te preparamos con profesionales altamente capacitados para acompañar tu carrera y rendir los exámenes de la facultad de medicina en todas las materias.</p>
-
-    <p>Centro Evaluador Dele & Aplicador Siele y Cele</p>
-    <div>
-        <em>DELE</em>
-        <em>SELE</em>
-        <em>CELE</em>
+<footer class="footer section-space f-purple-light">
+    <div class="flex space-between">
+        <div class="flex align-items">
+            <CamLogo color="--hue-purple-light"/>
+        </div>
+        <ul class="social-icons flex flex-gap-lg align-items">
+            <li><a href="#"><WhatsAppIcon color="--hue-purple-light" size={24} /></a></li>
+            <li><a href="#"><FacebookIcon color="--hue-purple-light" /></a></li>
+            <li><a href="#"><InstagramIcon color="--hue-purple-light" /></a></li>
+            <li><a href="#"><YoutubeIcon color="--hue-purple-light" /></a></li>
+            <li><a href="#"><TiktokIcon color="--hue-purple-light" /></a></li>
+        </ul>
     </div>
 
-    <p>Sede Lagos</p>
-    <p>Ovidio Lagos 640</p>
-    <p>Rosario, Santa Fe</p>
+    <p class="l-15 w-half m-block-x3">Contamos con más de 15 años de experiencia brindando cursos personalizados de Clases de Apoyo, Medicina e Idiomas. Te preparamos con profesionales altamente capacitados para acompañar tu carrera y rendir los exámenes de la facultad de medicina en todas las materias.</p>
 
-    <p>Horarios</p>
-    <p>Lunes - Viernes</p>
-    <p>9:00h a 16:00h</p>
+    <div class="m-block-x3">
+        <h4 class="subtitle medium">Centro Evaluador Dele & Aplicador Siele y Cele</h4>
+        <div>
+            <img src="logos/DELE_logo.png" alt="">
+            <img src="logos/SIELE_logo.png" alt="">
+            <img src="logos/CELE_logo.png" alt="">
+        </div>
+    </div>
 
-    <p>Contactos</p>
-    <p>+54 9 341 216-6867</p>
-    <p>Atenção para ingressantes em português</p>
-    <p>+54 9 341 546-9738</p>
-    <p>contacto@caminstituto.com</p>
+    <div class="flex flex-col flex-gap-lg">
+        <div class="flex flex-col flex-gap">
+            <h4 class="subtitle medium">Sede Lagos</h4>
+            <address class="flex align-items flex-gap">
+                <PinIcon color="--hue-purple" /> Ovidio Lagos 640
+            </address>
+            <address class="flex align-items flex-gap">
+                <MapIcon color="--hue-purple" /> Rosario, Santa Fe
+            </address>
+        </div>
+    
+        <div class="flex flex-col flex-gap">
+            <h4 class="subtitle medium">Horarios</h4>
+            <em class="flex align-items flex-gap">
+                <ScheduleIcon color="--hue-purple" /> Lunes - Viernes
+            </em>
+            <em class="flex align-items flex-gap">
+                <ClockIcon color="--hue-purple" lineColor="--hue-purple-dark"/> 9:00h a 16:00h
+            </em>
+        </div>
+    
+        <div class="flex flex-col flex-gap">
+            <h4 class="subtitle medium">Contactos</h4>
+            <em class="flex align-items flex-gap">
+                <WhatsAppIcon color="--hue-purple" size={18}/>
+                +54 9 341 216-6867
+            </em>
+            <em class="flex align-items flex-gap">
+                Atenção para ingressantes em português
+            </em>
+            <em class="flex align-items flex-gap">
+                <WhatsAppIcon color="--hue-purple" size={18}/>
+                +54 9 341 546-9738
+            </em>
+            <em class="flex align-items flex-gap">
+                <EmailSymbolIcon color="--hue-purple" size={18}/>
+                contacto@caminstituto.com
+            </em>
+        </div>
+    </div>
 
 </footer>
+
+<style>
+    .footer {
+        background-color: var(--hue-purple-dark);
+    }
+    .section-space {
+        padding-block: var(--section-vertical-space);
+        padding-inline: var(--section-horizontal-space);
+    }
+
+    .subtitle {
+        font-size: var(--subtitle);
+    }
+    .medium {
+        font-weight: 500;
+    }
+
+    ul {
+        padding: 0;
+    }
+    ul li {
+        list-style: none;
+        margin: 0;
+    }
+    .l-15 {
+        line-height: 1.5;
+    }
+    .w-half {
+        max-width: 60ch;
+        width: 100%;
+    }
+
+    .flex {
+        display: flex;
+    }
+    .flex-col {
+        flex-direction: column;
+    }
+    .flex-gap-lg {
+        gap: calc(var(--gap-space-lg) * 1.5);
+    }
+    .flex-gap {
+        gap: var(--gap-space);
+    }
+    .flex-gap-s {
+        gap: var(--gap-space-s);
+    }
+    .align-items {
+        align-items: center;
+    }
+    .space-between {
+        justify-content: space-between;
+    }
+
+    .m-block-x3 {
+        margin-block: calc(var(--gap-space-lg) * 3);
+    }
+
+    .f-white {
+        color: var(--hue-white);
+    }
+    .f-purple-light {
+        color: var(--hue-purple-light);
+    }
+</style>
