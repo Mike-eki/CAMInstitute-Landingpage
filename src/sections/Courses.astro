@@ -8,12 +8,12 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
 
 ---
 <section class="courses section-space">
-    <hgroup class="flex flex-col flex-gap-s green-light m-bottom">
+    <hgroup class="flex flex-col flex-gap-s green-light m-bottom text-align w-page m-auto">
         <h2 class="title medium"><strong class="medium green">Transformá tu</strong> pasión en una <strong class="medium green">profesión</strong> con salida laboral</h1>
         <p class="regular l-15">Instructorados y cursos cortos <strong class="regular green">con certificación universitaria</strong> avalada por la UAI para quienes quieren enseñar, capacitar y liderar.</p>
     </hgroup>
     
-    <div class="call-to-action p-top">
+    <div class="call-to-action p-top text-align">
         <a class="btn-cta" href="#">
             <WhatsAppIcon color="--hue-green-dark"/>
             <strong class="green-dark">¡Pedí info sobre tu curso ideal!</strong>
@@ -22,12 +22,12 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
         <img class="m-top" src="logos/UAI_logo.png" alt="" srcset="">
     </div>
 
-    <div class="image-frame space-huge">
-        <img class="rounded w-full" src="webp/estudiantes_006.webp" alt="">
+    <div class="image-frame space-huge text-align">
+        <img class="rounded w-page w-100" src="webp/estudiantes_006.webp" alt="">
     </div>
 
     <!-- INSTRUCTORADOS -->
-    <div class="bubbles flex flex-col space-huge w-full">
+    <div class="bubbles flex flex-col space-huge w-page m-auto">
        <header class="flex">
             <div class="bubble flex-item-center flex-item-75 flex-item-padding h-min">
                 <h2 class="special-subtitle medium green-dark">Instructorados</h2>
@@ -87,7 +87,7 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
     </div>
 
     <!-- CURSOS CORTOS -->
-    <div class="bubbles flex flex-col space-huge w-full">
+    <div class="bubbles flex flex-col space-huge w-page m-auto">
        <header class="flex">
            <div class="bubble flex-item-center flex-item-25 flex-item-padding h-min">
                <ThunderIcon color="--hue-green-dark" size={32}/>
@@ -123,7 +123,7 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
     </div>
 
     <!-- CURSOS AREA MEDICINA -->
-    <div class="bubbles flex flex-col space-huge w-full">
+    <div class="bubbles flex flex-col space-huge w-page m-auto">
        <header class="flex">
             <div class="bubble flex-item-center flex-item-75 flex-item-padding h-min">
                 <h2 class="special-subtitle medium green-dark">Cursos área salud</h2>
@@ -174,7 +174,7 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
        </section>
     </div>
 
-    <div class="call-to-action space-huge">
+    <div class="call-to-action space-huge text-align">
         <div class="flex flex-col flex-gap green-light">
             <p>¿Tenés dudas?</p>
             <p>¡Escribinos por WhatsApp!</p>
@@ -307,5 +307,9 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
 
     .title {
         font-size: var(--title);
+    }
+
+    .w-100 {
+        width: 100%;
     }
 </style>

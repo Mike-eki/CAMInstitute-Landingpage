@@ -1,28 +1,28 @@
 ---
 ---
 
-<form class="w-full flex flex-col" action="#" method="POST">
-    <label class="bg-blue content-space rounded flex flex-col flex-gap-s corner-bottom-left corner-bottom-right" for="nombre">
+<form class="w-page w-fill flex flex-col m-auto" action="#" method="POST">
+    <label class="bg-blue content-space rounded flex flex-col flex-gap-s corner-bottom-left corner-bottom-right box-sizing" for="nombre">
         <span class="f-blue-light">Nombre</span>
-        <input class="element-space rounded" type="text" id="nombre" name="nombre"
+        <input class="element-space rounded w-100 box-sizing" type="text" id="nombre" name="nombre"
                placeholder="Escribe tu nombre" required>
     </label>
-    <label class="bg-blue content-space rounded flex flex-col flex-gap-s corner-top-left corner-bottom-left corner-bottom-left corner-top-right" for="correo">
+    <label class="bg-blue content-space rounded flex flex-col flex-gap-s corner-top-left corner-bottom-left corner-bottom-left corner-top-right box-sizing" for="correo">
         <span class="f-blue-light">Correo</span>
-        <input class="element-space rounded" type="email" id="correo" name="correo"
+        <input class="element-space rounded w-100 box-sizing" type="email" id="correo" name="correo"
                placeholder="Escribe tu correo" required>
     </label>
-    <label class="bg-blue content-space rounded flex flex-col flex-gap-s corner-top-left corner-bottom-right" for="servicio">
+    <label class="bg-blue content-space rounded flex flex-col flex-gap-s corner-top-left corner-bottom-right box-sizing" for="servicio">
         <span class="f-blue-light">Servicio</span>
-        <select class="element-space rounded" name="servicio" id="servicio" required>
+        <select class="element-space rounded w-100 box-sizing" name="servicio" id="servicio" required>
             <option value="1" selected>Clases de apoyo de medicina</option>
             <option value="2">Capacitaciones y cursos</option>
             <option value="3">Aprender español</option>
         </select>
     </label>
-    <label class="bg-blue content-space rounded flex flex-col flex-gap-s corner-top-right corner-bottom-left corner-bottom-right" for="mensaje">
+    <label class="bg-blue content-space rounded flex flex-col flex-gap-s corner-top-right corner-bottom-left corner-bottom-right box-sizing" for="mensaje">
         <span class="f-blue-light">Mensaje</span>
-        <textarea class="element-space rounded" name="mensaje" id="mensaje" spellcheck="true"
+        <textarea class="element-space rounded w-100 box-sizing" name="mensaje" id="mensaje" spellcheck="true"
                   placeholder="Escribe tu mensaje" required></textarea>
     </label>
     <footer class="bg-blue content-space rounded corner-top-right corner-top-left">
@@ -87,11 +87,18 @@
 
     input, textarea, select {
         border: 1px solid #d2d2d2;
+        flex: 1;
     }
     input::placeholder,
     textarea::placeholder,
     select::placeholder {
         color: #d2d2d2;
+    }
+    select {
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMDAwIiBkPSJtMTIgMTVsLTUtNWgxMHoiLz48L3N2Zz4=) center right 5px no-repeat;
+        background-size: 20px;
+        background-color: var(--hue-white);
+        appearance: none;
     }
     textarea {
         resize: vertical;
@@ -112,5 +119,17 @@
         outline: 2px solid var(--hue-blue-dark);
         /* background-color: var(--hue-blue-dark);
         color: var(--hue-blue-light); */
+    }
+
+    .w-full {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .box-sizing {
+        box-sizing: border-box;
+    }
+    .w-100 {
+        width: 100%;
     }
 </style>

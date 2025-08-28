@@ -6,25 +6,25 @@ import Carrusel from "../components/Carrusel.astro";
 
 <section class="medicine">
 
-    <h1>Acompañamiento para aprobar tus materias de Medicina</h1>
+    <h1 class="text-align w-page m-auto">Acompañamiento para aprobar tus materias de Medicina</h1>
     <Carrusel />
 
-    <div class="testimony">
+    <div class="testimony m-auto w-page m-auto">
         <div class="testimony-quote">
             <q>Gracias al acompañamiento semanal, logré ordenar mis estudios y aprobar 3 materias en un solo cuatrimestre.</q>
             <div class="testimony-author">
                 <div class="avatar">
-                    <img src="https://www.svgrepo.com/show/535298/circle-user.svg" alt="" width="32">
+                    <img src="webp/estudiante_010.webp" alt="">
                 </div>
-                <div class="testimony-author-info">
-                    <p>Juan Peréz</p>
-                    <p>Estudiante de 3° año</p>
+                <div class="testimony-author-info flex flex-col flex-gap flex-item-stretch">
+                    <p class="regular">Matías P.</p>
+                    <p class="light">Estudiante de 3° año</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="call-to-action">
+    <div class="call-to-action text-align">
         <div class="flex">
             <p>¿Tenés dudas?</p>
             <p>¡Escribinos por WhatsApp!</p>
@@ -99,6 +99,11 @@ import Carrusel from "../components/Carrusel.astro";
         border-radius: 50%;
         overflow: hidden;
     }
+    .avatar img {
+        width: 2.5rem;
+        aspect-ratio: 1;
+        transform: scale(3) translate(3%, 18%); /* Ajustar la posición vertical de la imagen */
+    }
 
 
     a {
@@ -129,6 +134,26 @@ import Carrusel from "../components/Carrusel.astro";
         flex-direction: column;
 
         gap: var(--element-vertical-space);
+    }
+
+    .flex {
+        display: flex;
+    }
+    .flex-col {
+        flex-direction: column;
+    }
+    .flex-gap {
+        gap: var(--gap-space);
+    }
+    .flex-item-stretch {
+        align-self: stretch;
+    }
+
+    .regular {
+        font-weight: 400;
+    }
+    .light {
+        font-weight: 300;
     }
 
 </style>

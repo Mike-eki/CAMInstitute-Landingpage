@@ -1,48 +1,78 @@
----
----
 
-<nav>
-    <a href="#">
-        <img src="logos/cam_logo.svg" alt="" srcset="">
-    </a>
-    <ul class="bubble">
-        <li><a href="#medicina">Medicina</a></li>
-        <li><a href="#capacitacion">Capacitación</a></li>
-        <li><a href="#idiomas">Idiomas</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-    </ul>
-     <menu class="hide"> <!-- client:media="(max-width: 768px)" -->
-        <img src="icons/icon_menu.svg" alt="" srcset="">
-    </menu>
+
+<nav class="bg-purple-dark">
+    <div class="nav-container w-page m-auto">
+        <a class="logo" href="#">
+            <img src="logos/cam_logo.svg" alt="" srcset="" />
+        </a>
+        <ul class="bubble nav-links" id="nav-links">
+            <li id="cross-icon-li">
+                <img
+                    id="cross-icon"
+                    src="icons/icon_close_menu.svg"
+                    width="48"
+                    alt=""
+                />
+            </li>
+            <li>
+                <a class="link f-purple-light" href="#medicina">Medicina</a>
+            </li>
+            <li>
+                <a class="link f-purple-light" href="#capacitacion"
+                    >Capacitación</a>
+            </li>
+            <li><a class="link f-purple-light" href="#idiomas">Idiomas</a></li>
+            <li>
+                <a class="link f-purple-light" href="#contacto">Contacto</a>
+            </li>
+        </ul>
+        <menu id="hamburger-icon">
+            <img src="icons/icon_menu.svg" alt="" srcset="" />
+        </menu>
+    </div>
 </nav>
 
 <style>
     nav {
+        padding-block: calc(var(--element-vertical-space) * 2);
+    }
+    .bg-purple-dark {
+        background-color: var(--hue-purple-dark);
+    }
+
+    .nav-container {
+        position: fixed;
+        top: 0;
+        position-area: top center;
+        max-width: var(--width-page);
+        width: 100%;
+        z-index: 100;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem;
         background-color: var(--hue-purple-dark);
         color: var(--hue-white);
+        padding-inline: var(--section-horizontal-space);
+        z-index: 1000;
     }
-    ul {
+    .nav-links {
         display: flex;
         list-style: none;
         padding: 0;
+        /* padding-inline: var(--content-horizontal-space); */
     }
 
-    a {
+    .link {
         display: inline-block;
         padding-block: var(--element-vertical-space);
-        padding-inline: var(--content-horizontal-space);
-        color: var(--hue-white);
+        padding-inline: calc(var(--element-horizontal-space) * 0.5);
         border-radius: var(--rounded);
         text-decoration: none;
         font-weight: 500;
     }
 
-    a:hover {
-        /* text-decoration: underline; */
+    .link:hover {
         background-color: var(--hue-purple-light);
         color: var(--hue-purple-dark);
     }
@@ -52,8 +82,95 @@
         outline: 1px solid var(--hue-purple-light);
     }
 
-    .hide {
+    #hamburger-icon {
         display: none;
+        cursor: pointer;
     }
 
+    .f-purple-light {
+        color: var(--hue-purple-light);
+    }
+
+    menu {
+        padding: 0;
+    }
+
+    #cross-icon-li {
+        display: none;
+        cursor: pointer;
+    }
+
+    
+    @media screen and (max-width: 700px) {
+
+        
+        .nav-links {
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            gap: var(--element-vertical-space);
+            margin: 0;
+            left: 150%;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--hue-yellow-light);
+            padding-block: var(--content-vertical-space);
+            transition: left 0.3s ease; 
+        }
+        .nav-links > li {
+            padding-left: var(--element-horizontal-space);
+        }
+        .nav-links > li > .link {
+            padding-left: var(--element-horizontal-space);
+            background-color: var(--hue-yellow);
+            color: var(--hue-yellow-dark);
+            width: 100%;
+            font-size: var(--subtitle);
+        }
+        .nav-links > li > a:hover {
+            background-color: var(--hue-yellow);
+            color: var(--hue-yellow-light);
+        }
+        .open {
+            left: 50%;
+        }
+        .open > #cross-icon-li {
+            display: flex;
+        }
+
+        #cross-icon-li {
+            display: flex;
+        }
+        #hamburger-icon {
+            display: block;
+            padding-right: var(--element-horizontal-space);
+        }
+    }
 </style>
+
+<script type="module">
+function openMenu() {
+    const navLinks = document.querySelector("#nav-links");
+    if (navLinks) navLinks.classList.add("open");
+}
+
+function closeMenu() {
+    const navLinks = document.querySelector("#nav-links");
+    if (navLinks) navLinks.classList.remove("open");
+}
+
+// window.openMenu = openMenu;
+// window.closeMenu = closeMenu;
+document.addEventListener("DOMContentLoaded", () => {
+    document
+        .getElementById("hamburger-icon")
+        .addEventListener("click", () => {
+            openMenu();
+        });
+
+    document.getElementById("cross-icon-li").addEventListener("click", () => {
+        closeMenu();
+    });
+});
+</script>

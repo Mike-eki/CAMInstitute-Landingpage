@@ -13,11 +13,11 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
 ---
 
 <section class="language section-space">
-    <hgroup class="flex flex-col flex-gap-s red-light m-bottom">
+    <hgroup class="flex flex-col flex-gap-s red-light m-bottom text-align w-page m-auto">
         <h2 class="title medium"><strong class="red medium">Aprende español</strong> con un enfoque cultural y personalizado</h2>
         <p class="regular l-15">Indícanos tu país de residencia y <strong class="red regular">avanza
             con flexibilidad</strong></p>
-        <div class="flex">
+        <div class="flex m-auto">
             <button class="btn-country argentina flex flex-gap flex-align">
                 Argentina
                 <FlagWith Flag={ArgentinaIcon} MinorFlag={BrazilIcon} />
@@ -29,7 +29,7 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
         </div>
     </hgroup>
 
-<div class="tier-by-country argentina content-space">
+<div class="tier-by-country argentina content-space m-auto w-page">
 
     <div class="flex">
         <div class="bubble flex-item-25 corner-bottom-right relative">
@@ -92,7 +92,7 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
 
 </div>
 
-<div class="tier-by-country paraguay content-space">
+<div class="tier-by-country paraguay content-space m-auto w-page">
 
     <div class="flex">
         <div class="bubble flex-item-25 corner-bottom-right relative">
@@ -161,7 +161,7 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
     </div>
 </div>
 
-<div class="call-to-action space-huge">
+<div class="call-to-action space-huge text-align">
         <div class="flex flex-col flex-gap red-light">
             <p>¿Tenés dudas?</p>
             <p>¡Escribinos por WhatsApp!</p>
@@ -321,7 +321,6 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
     }
 
     .tier-by-country {
-        max-width: 600px;
         width: 100%;
         margin-block: calc(var(--content-vertical-space) * 2);
     }
