@@ -12,39 +12,40 @@ import WhatsAppIcon from "../svg/WhatsAppIcon.astro";
 import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
 ---
 
-<section class="language section-space">
+<section class="language section-space" id="idiomas">
     <hgroup class="flex flex-col flex-gap-s red-light m-bottom text-align w-page m-auto">
         <h2 class="title medium"><strong class="red medium">Aprende español</strong> con un enfoque cultural y personalizado</h2>
         <p class="regular l-15">Indícanos tu país de residencia y <strong class="red regular">avanza
             con flexibilidad</strong></p>
-        <div class="flex m-auto">
-            <button class="btn-country argentina flex flex-gap flex-align">
+        <div class="flex m-auto-change">
+            <button class="btn-country arg flex flex-gap flex-align active">
                 Argentina
                 <FlagWith Flag={ArgentinaIcon} MinorFlag={BrazilIcon} />
             </button>
-            <button class="btn-country paraguay flex flex-gap flex-align">
+            <button class="btn-country par flex flex-gap flex-align">
                 Paraguay
                 <FlagWith Flag={ParaguayIcon} MinorFlag={BrazilIcon} />
             </button>
         </div>
     </hgroup>
 
-<div class="tier-by-country argentina content-space m-auto w-page">
+<div class="tier-by-country argentina content-space m-auto w-page show">
 
-    <div class="flex">
+    <div class="flex flex-wrap">
         <div class="bubble flex-item-25 corner-bottom-right relative">
             <div class="bubble-white h-full flex-align flex-justify">
-                <ArgentinaIcon size={36} />
+                <!-- <ArgentinaIcon size={36} /> -->
+                 <FlagWith Flag={ArgentinaIcon} MinorFlag={BrazilIcon} />
             </div>
-            <div class="white-circle">
+            <!-- <div class="white-circle">
                     <BrazilIcon size={32} />
-            </div>
+            </div> -->
         </div>
 
         <div class="bubble flex-item-75 corner-bottom-left corner-bottom-right">
             <div class="bubble-white flex-gap-lg">
                 <p>Certificación en:</p>
-                <div class="flex flex-gap flex-align">
+                <div class="flex flex-gap flex-align flex-wrap">
                     <img class="dele" src="logos/dele_LOGO_original.webp" alt="" srcset="">
                     <img class="siele" src="logos/siele_LOGO_original.webp" alt="" srcset="">
                 </div>
@@ -94,7 +95,7 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
 
 <div class="tier-by-country paraguay content-space m-auto w-page">
 
-    <div class="flex">
+    <div class="flex flex-wrap">
         <div class="bubble flex-item-25 corner-bottom-right relative">
             <div class="bubble-white h-full flex-align flex-justify">
                 <img src="logos/HAIZEA_logo.svg" alt="">
@@ -104,7 +105,7 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
         <div class="bubble flex-item-75 corner-bottom-left corner-bottom-right">
             <div class="bubble-white flex-gap-lg">
                 <p>Certificación en:</p>
-                <div class="flex flex-gap flex-align">
+                <div class="flex flex-gap flex-align flex-wrap">
                     <img class="siele" src="logos/siele_LOGO_original.webp" alt="" srcset="">
                     <img class="cele" src="logos/cele_LOGO_original.webp" alt="" srcset="">
                 </div>
@@ -166,13 +167,13 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
             <p>¿Tenés dudas?</p>
             <p>¡Escribinos por WhatsApp!</p>
         </div>
-        <a class="btn-cta m-block" href="#">
+        <a class="btn-cta m-block" target="_blank" href="https://wa.me/5493412166867">
             <WhatsAppIcon color="--hue-red-dark" />
             <strong class="regular red-dark">Enviar mensaje</strong>
         </a>
 
         <p class="red-light" style="padding-top: var(--element-vertical-space)">También puedes contactarnos por correo</p>
-        <a class="btn-cta m-block" href="#">
+        <a class="btn-cta m-block" href="mailto:contacto@caminstituto.com">
             <EmailLetterIcon color="--hue-red-dark" />
             <strong class="regular red-dark">Enviar email</strong>
         </a>
@@ -257,12 +258,17 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
         background-color: var(--hue-red);
         color: var(--hue-red-dark);
     }
-    .btn-country.argentina {
+    .btn-country.arg {
         border-radius: var(--rounded) 0 var(--rounded) var(--rounded);
     }
-    .btn-country.paraguay {
+    .btn-country.par {
         border-radius: 0 var(--rounded) var(--rounded) var(--rounded);
     }
+    .active {
+        background-color: var(--hue-red);
+        color: var(--hue-red-dark);
+    }
+    
 
     .bubble {
         background-color: var(--hue-red);
@@ -305,22 +311,12 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
     .flex-justify {
         justify-content: center;
     }
-
-    .white-circle {
-        position: absolute;
-        top: 32px;
-        left: 85%;
-        transform: translate(-50%, -50%);
-        clip-path: circle(30% at 24px 22px);
-        /* clip-path: circle(30% at 14px 19px); */
-        background: #009B3A;
-        padding: 0.5rem;
-    }
     .relative {
         position: relative;
     }
 
     .tier-by-country {
+        display: none;
         width: 100%;
         margin-block: calc(var(--content-vertical-space) * 2);
     }
@@ -372,4 +368,48 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
         max-width: 5rem;
         width: 100%;
     }
+
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    .m-auto-change {
+        margin-inline: auto;
+    }
+
+    .show {
+        display: block;
+    }
+
+    @media screen and (max-width: 750px) {
+        .m-auto-change {
+            margin: 0;
+        }
+    }
 </style>
+
+
+<script type="module">
+
+    function activeTierArg() {
+        document.querySelector('.arg').classList.add('active');
+        document.querySelector('.par').classList.remove('active');
+
+        document.querySelector('.tier-by-country.argentina').classList.add('show');
+        document.querySelector('.tier-by-country.paraguay').classList.remove('show');
+    }
+
+    function activeTierPar() {
+        document.querySelector('.par').classList.add('active');
+        document.querySelector('.arg').classList.remove('active');
+
+        document.querySelector('.tier-by-country.argentina').classList.remove('show');
+        document.querySelector('.tier-by-country.paraguay').classList.add('show');
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector('.arg').addEventListener('click', activeTierArg);
+        document.querySelector('.par').addEventListener('click', activeTierPar);
+    });
+
+</script>

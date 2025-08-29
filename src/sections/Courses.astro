@@ -7,19 +7,19 @@ import HeartIcon from "../svg/HeartIcon.astro";
 import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
 
 ---
-<section class="courses section-space">
+<section class="courses section-space" id="capacitacion">
     <hgroup class="flex flex-col flex-gap-s green-light m-bottom text-align w-page m-auto">
         <h2 class="title medium"><strong class="medium green">Transformá tu</strong> pasión en una <strong class="medium green">profesión</strong> con salida laboral</h1>
         <p class="regular l-15">Instructorados y cursos cortos <strong class="regular green">con certificación universitaria</strong> avalada por la UAI para quienes quieren enseñar, capacitar y liderar.</p>
     </hgroup>
     
     <div class="call-to-action p-top text-align">
-        <a class="btn-cta" href="#">
+        <a class="btn-cta" target="_blank" href="https://wa.me/5493412166867">
             <WhatsAppIcon color="--hue-green-dark"/>
             <strong class="green-dark">¡Pedí info sobre tu curso ideal!</strong>
         </a>
         <p class="m-top green-light">Certificación con aval universitario</p>
-        <img class="m-top" src="logos/uai_LOGO_white.webp" alt="" srcset="">
+        <img class="uai m-top" src="logos/uai_LOGO_white.webp" alt="" srcset="">
     </div>
 
     <div class="image-frame space-huge text-align">
@@ -28,12 +28,12 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
 
     <!-- INSTRUCTORADOS -->
     <div class="bubbles flex flex-col space-huge w-page m-auto">
-       <header class="flex">
+       <header class="flex flex-wrap">
             <div class="bubble flex-item-center flex-item-75 flex-item-padding h-min">
                 <h2 class="special-subtitle medium green-dark">Instructorados</h2>
             </div>
             <div class="bubble flex-item-center flex-item-25 flex-item-padding h-min">
-                <img src="logos/yogafunes_LOGO.webp">
+                <img width="72" src="logos/yogafunes_LOGO.webp">
             </div>
         </header>
         <section class="flex">
@@ -179,13 +179,13 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
             <p>¿Tenés dudas?</p>
             <p>¡Escribinos por WhatsApp!</p>
         </div>
-        <a class="btn-cta m-block" href="#">
+        <a class="btn-cta m-block" target="_blank" href="https://wa.me/5493412166867">
             <WhatsAppIcon color="--hue-green-dark" />
             <strong class="regular green-dark">Enviar mensaje</strong>
         </a>
 
         <p class="green-light" style="padding-top: var(--element-vertical-space)">También puedes contactarnos por correo</p>
-        <a class="btn-cta m-block" href="#">
+        <a class="btn-cta m-block" href="mailto:contacto@caminstituto.com">
             <EmailLetterIcon color="--hue-green-dark" />
             <strong class="regular green-dark">Enviar email</strong>
         </a>
@@ -311,5 +311,13 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
 
     .w-100 {
         width: 100%;
+    }
+
+    .uai {
+        max-width: 8rem;
+    }
+
+    .flex-wrap {
+        flex-wrap: wrap;
     }
 </style>

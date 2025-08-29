@@ -28,52 +28,52 @@ import EmailSymbolIcon from "../svg/EmailSymbolIcon.astro"
             </ul>
         </div>
     
-        <p class="l-15 w-half m-block-x3">Contamos con más de 15 años de experiencia brindando cursos personalizados de Clases de Apoyo, Medicina e Idiomas. Te preparamos con profesionales altamente capacitados para acompañar tu carrera y rendir los exámenes de la facultad de medicina en todas las materias.</p>
+        <p class="l-15 w-half m-block-x3 text-align m-auto">Contamos con más de 15 años de experiencia brindando cursos personalizados de Clases de Apoyo, Medicina e Idiomas. Te preparamos con profesionales altamente capacitados para acompañar tu carrera y rendir los exámenes de la facultad de medicina en todas las materias.</p>
     
-        <div class="m-block-x3">
-            <h4 class="subtitle medium">Centro Evaluador Dele & Aplicador Siele y Cele</h4>
-            <div class="images flex flex-gap flex-align">
+        <div class="m-block-x3 text-align">
+            <h4 class="subtitle medium text-align">Centro Evaluador Dele & Aplicador Siele y Cele</h4>
+            <div class="images flex flex-gap flex-align flex-justify-change">
                 <img class="dele" src="logos/dele_LOGO_white.webp" alt="">
                 <img class="siele" src="logos/siele_LOGO_white.webp" alt="">
                 <img class="cele" src="logos/cele_LOGO_white.webp" alt="">
             </div>
         </div>
     
-        <div class="flex flex-col flex-gap-lg">
+        <div class="flex flex-col flex-gap-lg text-align">
             <div class="flex flex-col flex-gap">
                 <h4 class="subtitle medium">Sede Lagos</h4>
-                <address class="flex align-items flex-gap">
+                <address class="flex align-items flex-gap flex-justify-change">
                     <PinIcon color="--hue-purple" /> Ovidio Lagos 640
                 </address>
-                <address class="flex align-items flex-gap">
+                <address class="flex align-items flex-gap flex-justify-change">
                     <MapIcon color="--hue-purple" /> Rosario, Santa Fe
                 </address>
             </div>
         
             <div class="flex flex-col flex-gap">
                 <h4 class="subtitle medium">Horarios</h4>
-                <em class="flex align-items flex-gap">
+                <em class="flex align-items flex-gap flex-justify-change">
                     <ScheduleIcon color="--hue-purple" /> Lunes - Viernes
                 </em>
-                <em class="flex align-items flex-gap">
+                <em class="flex align-items flex-gap flex-justify-change">
                     <ClockIcon color="--hue-purple" lineColor="--hue-purple-dark"/> 9:00h a 16:00h
                 </em>
             </div>
         
             <div class="flex flex-col flex-gap">
                 <h4 class="subtitle medium">Contactos</h4>
-                <em class="flex align-items flex-gap">
+                <em class="flex align-items flex-gap flex-justify-change">
                     <WhatsAppIcon color="--hue-purple" size={18}/>
                     +54 9 341 216-6867
                 </em>
-                <em class="flex align-items flex-gap">
+                <em class="flex align-items flex-gap flex-justify-change">
                     Atenção para ingressantes em português
                 </em>
-                <em class="flex align-items flex-gap">
+                <em class="flex align-items flex-gap flex-justify-change">
                     <WhatsAppIcon color="--hue-purple" size={18}/>
                     +54 9 341 546-9738
                 </em>
-                <em class="flex align-items flex-gap">
+                <em class="flex align-items flex-gap flex-justify-change">
                     <EmailSymbolIcon color="--hue-purple" size={18}/>
                     contacto@caminstituto.com
                 </em>
@@ -171,5 +171,19 @@ import EmailSymbolIcon from "../svg/EmailSymbolIcon.astro"
     }
     .flex-align {
         align-items: center;
+    }
+
+    .block {
+        display: block;
+    }
+
+    .flex-justify-change {
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 750px) {
+        .flex-justify-change {
+            justify-content: left;
+        }
     }
 </style>

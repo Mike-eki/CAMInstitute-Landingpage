@@ -8,20 +8,20 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
     <article class="grid content-space w-page m-auto">
 
         <div class="grid-item-1">
-            <header class="bubble-fill">
+            <header class="bubble-fill rounded">
                 <h1 class="medium"><strong class="medium">Tu próximo paso académico,</strong> acompañado por expertos</h1>
              </header>
-            <footer class="bubble-fill">
+            <footer class="bubble-fill rounded">
                 <p>En <strong class="regular">Instituto CAM</strong>  formamos futuros médicos, ofrecemos capacitaciones y enseñamos español como lengua extranjera. Además somos centro evaluador SIELE y DELE.</p>
             </footer>
         </div>
 
         <div class="grid-item-2">
-            <a class="btn-cta" href="#">
+            <a class="btn-cta rounded" target="_blank" href="https://wa.me/5493412166867">
                 <WhatsAppIcon color="--hue-purple" size={36} />
                 <strong class="medium font-subtitle">¡Empezá hoy!</strong>
             </a>
-            <aside class="bubble-fill">
+            <aside class="bubble-fill rounded">
                 <p>Con soporte de:</p>
                 <ul class="logo-list">
                     <li>
@@ -47,7 +47,7 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
         </div>
 
         <div class="grid-item-3 image-frame">
-            <img src="webp/estudiantes_001.webp" alt="" srcset="">
+            <img class="rounded-change" src="webp/estudiantes_001.webp" alt="" srcset="">
         </div>
 
     </article>
@@ -67,6 +67,9 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-auto-rows: min-content;
+
+        position: relative;
+        overflow: hidden;
     }
     .grid-item-1 {
         grid-column: span 2;
@@ -114,7 +117,7 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
         line-height: 1.5;
         font-size: var(--body);
     }
-    a {
+    .btn-cta {
         width: max-content;
         display: flex;
         align-items: center;
@@ -127,8 +130,6 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
 
         padding-block: var(--element-vertical-space);
         padding-inline: var(--element-horizontal-space);
-
-        border-radius: var(--rounded);
     }
     ul, ul li {
         list-style: none;
@@ -159,7 +160,6 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
         padding-block: var(--content-vertical-space);
         padding-inline: var(--content-horizontal-space);
 
-        border-radius: var(--rounded);
     }
 
     .logo-list {
@@ -195,7 +195,7 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
     }
 
     .image-frame {
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 
     .image-frame img {
@@ -203,10 +203,45 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    .rounded {
+        border-radius: var(--rounded);
+    }
+    .rounded-change {
         border-radius: var(--rounded);
     }
 
-    @media screen (max-width: 800px) {
+    @media (max-width: 750px) {
+
+        .hero {
+            padding: 0;
+        }
+        .grid {
+            grid-auto-rows: minmax(100px, auto);
+        }
+        .grid-item-1 {
+            grid-column: 1 / 5;
+            z-index: 1;
+            padding-top: calc(var(--section-vertical-space) * 2);
+            padding-inline: var(--section-horizontal-space);
+        }
+        .grid-item-2 {
+            grid-column: 1 / 5;
+            z-index: 1;
+            padding-bottom: calc(var(--section-vertical-space));
+            padding-inline: var(--section-horizontal-space);
+        }
+        .grid-item-3 {
+            grid-column: 1 / 5;
+            opacity: 0.5;
+            z-index: 0;
+            position: absolute;
+            padding-top: var(--section-vertical-space);
+        }
+        .rounded-change {
+            border-radius: 0px;
+        }
 
     }
 </style>
