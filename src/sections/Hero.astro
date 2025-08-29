@@ -25,22 +25,22 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
                 <p>Con soporte de:</p>
                 <ul class="logo-list">
                     <li>
-                        <img src="logos/UAI_logo.png" alt="UAI">
+                        <img class="uai" src="logos/uai_LOGO_black.webp" alt="UAI">
                     </li>
                     <li>
-                        <img src="logos/DELE_logo.png" alt="DELE">
+                        <img class="dele" src="logos/dele_LOGO_black.webp" alt="DELE">
                     </li>
                     <li>
-                        <img src="logos/SIELE_logo.png" alt="SIELE">
+                        <img class="siele" src="logos/siele_LOGO_black.webp" alt="SIELE">
                     </li>
                     <li>
-                        <img src="logos/SEA_logo.png" alt="SEA">
+                        <img class="sea" src="logos/sea_LOGO_black.webp" alt="SEA">
                     </li>
                     <li>
-                        <img src="logos/HAIZEA_logo.svg" alt="HAIZEA">
+                        <img class="haizea" src="logos/HAIZEA_logo.svg" alt="HAIZEA">
                     </li>
                     <li>
-                        <img src="logos/CELE_logo.png" alt="CELE">
+                        <img class="cele" src="logos/cele_LOGO_black.webp" alt="CELE">
                     </li>
                 </ul>
             </aside>
@@ -164,6 +164,7 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
 
     .logo-list {
         display: flex;
+        align-items: center;
         flex-wrap: wrap;
         justify-content: center;
 
@@ -172,7 +173,25 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
         gap: var(--element-horizontal-space);
     }
     .logo-list li img {
-        /* width: 2rem; */
+        width: 100%;
+    }
+    .uai {
+        max-width: 8rem;
+    }
+    .dele {
+        max-width: 3.5rem;
+    }
+    .siele {
+        max-width: 6rem;
+    }
+    .sea {
+        max-width: 6rem;
+    }
+    .haizea {
+        max-width: 8rem;
+    }
+    .cele {
+        max-width: 6rem;
     }
 
     .image-frame {
@@ -181,9 +200,13 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
 
     .image-frame img {
         display: block;
-        max-width: 100%;
-        max-height: 30rem;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         border-radius: var(--rounded);
+    }
+
+    @media screen (max-width: 800px) {
+
     }
 </style>

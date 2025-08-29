@@ -32,7 +32,20 @@
     </div>
 </nav>
 
+<div class="overlay"></div>
+
 <style>
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: none;
+    }
+    .show {
+        display: block;
+    }
     nav {
         padding-block: calc(var(--element-vertical-space) * 2);
     }
@@ -46,7 +59,7 @@
         position-area: top center;
         max-width: var(--width-page);
         width: 100%;
-        z-index: 100;
+        z-index: 9;
 
         display: flex;
         justify-content: space-between;
@@ -55,6 +68,11 @@
         color: var(--hue-white);
         padding-inline: var(--section-horizontal-space);
         z-index: 1000;
+
+        
+        border-radius: 0 0 var(--rounded) var(--rounded);
+        overflow: hidden;
+        transition: top 0.3s ease;
     }
     .nav-links {
         display: flex;
@@ -101,7 +119,7 @@
     }
 
     
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 800px) {
 
         
         .nav-links {
@@ -152,25 +170,57 @@
 <script type="module">
 function openMenu() {
     const navLinks = document.querySelector("#nav-links");
+    const overlay = document.querySelector(".overlay");
     if (navLinks) navLinks.classList.add("open");
+    if (overlay) overlay.classList.add("show");
 }
 
 function closeMenu() {
     const navLinks = document.querySelector("#nav-links");
+    const overlay = document.querySelector(".overlay");
     if (navLinks) navLinks.classList.remove("open");
+    if (overlay) overlay.classList.remove("show");
 }
 
-// window.openMenu = openMenu;
-// window.closeMenu = closeMenu;
+let lastScrollTop = 0; // Variable para almacenar la posición del scroll
+    const navContainer = document.querySelector('.nav-container');
+
+    function handleScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Desplazándose hacia abajo
+            navContainer.style.top = '-150px'; // Ocultar el navbar
+        } else {
+            // Desplazándose hacia arriba
+            navContainer.style.top = '0'; // Mostrar el navbar
+        }
+        lastScrollTop = scrollTop; // Actualizar la posición del scroll
+    }
+
+    
+    
 document.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener('scroll', handleScroll);
+
     document
-        .getElementById("hamburger-icon")
-        .addEventListener("click", () => {
-            openMenu();
-        });
+    .getElementById("hamburger-icon")
+    .addEventListener("click", () => {
+        openMenu();
+    });
 
     document.getElementById("cross-icon-li").addEventListener("click", () => {
         closeMenu();
+    });
+
+    document.querySelector(".overlay").addEventListener("click", () => {
+        closeMenu();
+    });
+
+    document.querySelectorAll(".link").forEach((link) => {
+        link.addEventListener("click", () => {
+            closeMenu();
+        });
     });
 });
 </script>

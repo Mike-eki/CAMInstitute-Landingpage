@@ -44,9 +44,9 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
         <div class="bubble flex-item-75 corner-bottom-left corner-bottom-right">
             <div class="bubble-white flex-gap-lg">
                 <p>Certificación en:</p>
-                <div class="flex flex-gap">
-                    <img src="logos/DELE_logo.png" alt="" srcset="">
-                    <img src="logos/SIELE_logo.png" alt="" srcset="">
+                <div class="flex flex-gap flex-align">
+                    <img class="dele" src="logos/dele_LOGO_original.webp" alt="" srcset="">
+                    <img class="siele" src="logos/siele_LOGO_original.webp" alt="" srcset="">
                 </div>
             </div>
         </div>
@@ -104,9 +104,9 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
         <div class="bubble flex-item-75 corner-bottom-left corner-bottom-right">
             <div class="bubble-white flex-gap-lg">
                 <p>Certificación en:</p>
-                <div class="flex flex-gap">
-                    <img src="logos/SIELE_logo.png" alt="" srcset="">
-                    <img src="logos/CELE_logo.png" alt="" srcset="">
+                <div class="flex flex-gap flex-align">
+                    <img class="siele" src="logos/siele_LOGO_original.webp" alt="" srcset="">
+                    <img class="cele" src="logos/cele_LOGO_original.webp" alt="" srcset="">
                 </div>
             </div>
         </div>
@@ -351,5 +351,25 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
     }
     .m-block {
         margin-block: var(--element-vertical-space);
+    }
+
+    .flex-align {
+        align-items: center;
+    }
+
+    .dele {
+        display: block;
+        max-width: 4rem;
+        width: 100%;
+    }
+    .siele {
+        display: flex;
+        max-width: 7rem;
+        width: 100%;
+    }
+    .cele {
+        display: block;
+        max-width: 5rem;
+        width: 100%;
     }
 </style>

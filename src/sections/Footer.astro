@@ -32,10 +32,10 @@ import EmailSymbolIcon from "../svg/EmailSymbolIcon.astro"
     
         <div class="m-block-x3">
             <h4 class="subtitle medium">Centro Evaluador Dele & Aplicador Siele y Cele</h4>
-            <div>
-                <img src="logos/DELE_logo.png" alt="">
-                <img src="logos/SIELE_logo.png" alt="">
-                <img src="logos/CELE_logo.png" alt="">
+            <div class="images flex flex-gap flex-align">
+                <img class="dele" src="logos/dele_LOGO_white.webp" alt="">
+                <img class="siele" src="logos/siele_LOGO_white.webp" alt="">
+                <img class="cele" src="logos/cele_LOGO_white.webp" alt="">
             </div>
         </div>
     
@@ -153,5 +153,23 @@ import EmailSymbolIcon from "../svg/EmailSymbolIcon.astro"
     }
     .bg-purple-dark {
         background-color: var(--hue-purple-dark);
+    }
+
+    .images img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .dele {
+        max-width: 5rem;
+    }
+    .siele {
+        max-width: 8rem;
+    }
+    .cele {
+        max-width: 6.5rem;
+    }
+    .flex-align {
+        align-items: center;
     }
 </style>
