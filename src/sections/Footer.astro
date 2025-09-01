@@ -33,9 +33,9 @@ import EmailSymbolIcon from "../svg/EmailSymbolIcon.astro"
         <div class="m-block-x3 text-align">
             <h4 class="subtitle medium text-align">Centro Evaluador Dele & Aplicador Siele y Cele</h4>
             <div class="images flex flex-gap flex-align flex-justify-change">
-                <img class="dele" src="logos/dele_LOGO_white.webp" alt="">
-                <img class="siele" src="logos/siele_LOGO_white.webp" alt="">
-                <img class="cele" src="logos/cele_LOGO_white.webp" alt="">
+                <img class="dele" src="CAMInstitute-Landingpage/logos/dele_LOGO_white.webp" alt="">
+                <img class="siele" src="CAMInstitute-Landingpage/logos/siele_LOGO_white.webp" alt="">
+                <img class="cele" src="CAMInstitute-Landingpage/logos/cele_LOGO_white.webp" alt="">
             </div>
         </div>
     
@@ -62,21 +62,32 @@ import EmailSymbolIcon from "../svg/EmailSymbolIcon.astro"
         
             <div class="flex flex-col flex-gap">
                 <h4 class="subtitle medium">Contactos</h4>
-                <em class="flex align-items flex-gap flex-justify-change">
+                <a 
+                    class="flex align-items flex-gap flex-justify-change f-purple-light"
+                    href="https://wa.me/5493412166867"
+                    target="_blank"
+                >
                     <WhatsAppIcon color="--hue-purple" size={18}/>
                     +54 9 341 216-6867
-                </em>
+                </a>
                 <em class="flex align-items flex-gap flex-justify-change">
                     Atenção para ingressantes em português
                 </em>
-                <em class="flex align-items flex-gap flex-justify-change">
+                <a 
+                    class="flex align-items flex-gap flex-justify-change f-purple-light"
+                    href="https://wa.me/5493415469738"
+                    target="_blank"
+                >
                     <WhatsAppIcon color="--hue-purple" size={18}/>
                     +54 9 341 546-9738
-                </em>
-                <em class="flex align-items flex-gap flex-justify-change">
+                </a>
+                <a 
+                    class="flex align-items flex-gap flex-justify-change f-purple-light"
+                    href="mailto:contacto@caminstituto.com"
+                >
                     <EmailSymbolIcon color="--hue-purple" size={18}/>
                     contacto@caminstituto.com
-                </em>
+                </a>
             </div>
         </div>
     
@@ -84,6 +95,11 @@ import EmailSymbolIcon from "../svg/EmailSymbolIcon.astro"
 </div>
 
 <style>
+
+    a {
+        text-decoration: none;
+    }
+
     .footer {
         background-color: var(--hue-purple-dark);
     }
