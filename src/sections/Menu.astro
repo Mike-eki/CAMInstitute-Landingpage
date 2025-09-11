@@ -1,7 +1,7 @@
 
 
 <nav class="bg-purple-dark">
-    <div class="nav-container w-page m-auto">
+    <div class="nav-container m-auto">
         <a class="logo" href="#">
             <img src="logos/cam_logo.svg" alt="" srcset="" />
         </a>
@@ -59,29 +59,30 @@
     .nav-container {
         position: fixed;
         top: 0;
+        left: 50%;
+        transform: translateX(-50%);
         position-area: top center;
         max-width: var(--width-page);
         width: 100%;
-        z-index: 9;
 
         display: flex;
         justify-content: space-between;
         align-items: center;
         background-color: var(--hue-purple-dark);
-        color: var(--hue-white);
-        padding-inline: var(--section-horizontal-space);
+        
         z-index: 1000;
-
         
         border-radius: 0 0 var(--rounded) var(--rounded);
-        overflow: hidden;
         transition: top 0.3s ease;
     }
     .nav-links {
         display: flex;
         list-style: none;
-        padding: 0;
-        /* padding-inline: var(--content-horizontal-space); */
+        padding: 0; 
+        margin-right: var(--section-horizontal-space);
+    }
+    .logo {
+        margin-left: var(--section-horizontal-space);
     }
 
     .link {

@@ -17,10 +17,14 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
         </div>
 
         <div class="grid-item-2">
-            <a class="btn-cta rounded" target="_blank" href="https://wa.me/5493412166867">
-                <WhatsAppIcon color="--hue-purple" size={36} />
-                <strong class="medium font-subtitle">¡Empezá hoy!</strong>
-            </a>
+            <div class="btn-cta rounded">
+                <div class="flex flex-center gap-space">
+                    <WhatsAppIcon color="--hue-purple" size={36} />
+                    <strong class="medium font-subtitle">¡Empezá hoy!</strong>
+                </div>
+                <a class="wsp-cta" target="_blank" href="https://wa.me/5493412166867">Español</a>
+                <a class="wsp-cta" target="_blank" href="https://wa.me/5493415469738">Português</a>
+            </div>
             <aside class="bubble-fill rounded">
                 <p>Con soporte de:</p>
                 <ul class="logo-list">
@@ -91,8 +95,15 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
         display: flex;
         width: 100%;
     }
+    .flex-center {
+        justify-content: center;
+        align-items: center;
+    }
     .flex-item {
         flex: 1;
+    }
+    .gap-space {
+        gap: var(--gap-space);
     }
 
     .elements-col {
@@ -118,6 +129,7 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
         font-size: var(--body);
     }
     .btn-cta {
+        position: relative;
         width: max-content;
         display: flex;
         align-items: center;
@@ -130,6 +142,33 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
 
         padding-block: var(--element-vertical-space);
         padding-inline: var(--element-horizontal-space);
+
+        cursor: pointer;
+    }
+    .wsp-cta {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        color: var(--hue-yellow-dark);
+        font-weight: 500;
+        background-color: var(--hue-yellow);
+
+        padding-inline: var(--element-horizontal-space);
+        padding-block: var(--element-vertical-space);
+        border-radius: var(--rounded);
+        transition: all 0.3s ease;
+    }
+    .wsp-cta.show:first-of-type {
+        display: block;
+        top: -160%;
+        left: 0;
+    }
+    .wsp-cta.show:last-of-type {
+        display: block;
+        top: -80%;
+        left: 0;
     }
     ul, ul li {
         list-style: none;
@@ -245,3 +284,31 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
 
     }
 </style>
+
+
+<script>
+    function handleWhatsAppCTAs() {
+        
+        const ctas = document.querySelectorAll('.wsp-cta');
+        
+        ctas.forEach(
+            cta => {
+                if (cta.classList.contains('show'))
+                    cta.classList.remove('show');
+                else 
+                    cta.classList.add('show');
+                
+            }
+        );
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const btnCTA = document.querySelector(".btn-cta");
+        if (btnCTA)
+            btnCTA.addEventListener('click', () => handleWhatsAppCTAs());
+
+    });
+
+    
+</script>
