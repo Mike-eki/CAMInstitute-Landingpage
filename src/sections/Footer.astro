@@ -24,7 +24,7 @@ import EmailSymbolIcon from "../svg/EmailSymbolIcon.astro"
                 <li><a href="https://www.facebook.com/institutocam.medicina"><FacebookIcon color="--hue-purple-light" /></a></li>
                 <li><a href="https://www.instagram.com/institutocam/?hl=es-la"><InstagramIcon color="--hue-purple-light" /></a></li>
                 <li><a href="https://www.youtube.com/@caminstituto5827"><YoutubeIcon color="--hue-purple-light" /></a></li>
-                <li><a href="#"><TiktokIcon color="--hue-purple-light" /></a></li>
+                <!-- <li><a href="#"><TiktokIcon color="--hue-purple-light" /></a></li> -->
             </ul>
         </div>
     
@@ -33,24 +33,26 @@ import EmailSymbolIcon from "../svg/EmailSymbolIcon.astro"
         <div class="m-block-x3 text-align">
             <h4 class="subtitle medium text-align">Centro Evaluador Dele & Aplicador Siele y Cele</h4>
             <div class="images flex flex-gap flex-align flex-justify-change">
-                <img class="dele" src="logos/dele_LOGO_white.webp" alt="">
-                <img class="siele" src="logos/siele_LOGO_white.webp" alt="">
-                <img class="cele" src="logos/cele_LOGO_white.webp" alt="">
+                <img class="dele" src="landingpage/logos/dele_LOGO_white.webp" alt="">
+                <img class="siele" src="landingpage/logos/siele_LOGO_white.webp" alt="">
+                <img class="cele" src="landingpage/logos/cele_LOGO_white.webp" alt="">
             </div>
         </div>
     
         <div class="flex flex-col flex-gap-lg text-align">
-            <div class="flex flex-col flex-gap">
+            <div class="flex flex-col flex-gap center-margin">
                 <h4 class="subtitle medium">Sede Lagos</h4>
                 <address class="flex align-items flex-gap flex-justify-change">
-                    <PinIcon color="--hue-purple" /> Ovidio Lagos 640
+                    <PinIcon color="--hue-purple" /> 
+                    <a class="map" href="https://maps.app.goo.gl/YWyaSkCwqar3gCwc8">Ovidio Lagos 640</a>
                 </address>
                 <address class="flex align-items flex-gap flex-justify-change">
-                    <MapIcon color="--hue-purple" /> Rosario, Santa Fe
+                    <MapIcon color="--hue-purple" /> 
+                    <a class="map" href="https://maps.app.goo.gl/YWyaSkCwqar3gCwc8">Rosario, Santa Fe</a>
                 </address>
             </div>
         
-            <div class="flex flex-col flex-gap">
+            <div class="flex flex-col flex-gap center-margin">
                 <h4 class="subtitle medium">Horarios</h4>
                 <em class="flex align-items flex-gap flex-justify-change">
                     <ScheduleIcon color="--hue-purple" /> Lunes - Viernes
@@ -60,10 +62,10 @@ import EmailSymbolIcon from "../svg/EmailSymbolIcon.astro"
                 </em>
             </div>
         
-            <div class="flex flex-col flex-gap">
+            <div class="flex flex-col flex-gap center-margin">
                 <h4 class="subtitle medium">Contactos</h4>
                 <a 
-                    class="flex align-items flex-gap flex-justify-change f-purple-light"
+                    class="flex align-items flex-gap flex-justify-change f-purple-light map"
                     href="https://wa.me/5493412166867"
                     target="_blank"
                 >
@@ -74,7 +76,7 @@ import EmailSymbolIcon from "../svg/EmailSymbolIcon.astro"
                     Atenção para ingressantes em português
                 </em>
                 <a 
-                    class="flex align-items flex-gap flex-justify-change f-purple-light"
+                    class="flex align-items flex-gap flex-justify-change f-purple-light map"
                     href="https://wa.me/5493415469738"
                     target="_blank"
                 >
@@ -83,7 +85,7 @@ import EmailSymbolIcon from "../svg/EmailSymbolIcon.astro"
                 </a>
                 <a 
                     class="flex align-items flex-gap flex-justify-change f-purple-light"
-                    href="mailto:contacto@caminstituto.com"
+                    href="#contacto"
                 >
                     <EmailSymbolIcon color="--hue-purple" size={18}/>
                     contacto@caminstituto.com
@@ -197,9 +199,23 @@ import EmailSymbolIcon from "../svg/EmailSymbolIcon.astro"
         justify-content: center;
     }
 
+    .map {
+        text-decoration: underline;
+        color: var(--hue-purple-light);
+    }
+
+    .center-margin {
+        margin-inline: auto;
+    }
+
     @media screen and (max-width: 750px) {
         .flex-justify-change {
             justify-content: left;
+        }
+        
+        .center-margin {
+            margin: 0;
+            margin-right: auto;
         }
     }
 </style>

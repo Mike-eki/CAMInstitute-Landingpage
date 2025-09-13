@@ -11,14 +11,44 @@ import Carrusel from "../components/Carrusel.astro";
 
     <div class="testimony m-auto w-page m-auto">
         <div class="testimony-quote">
-            <q>Gracias al acompañamiento semanal, logré ordenar mis estudios y aprobar 3 materias en un solo cuatrimestre.</q>
+            <q>¡Excelente la atención! Es integral y se ocupan no solo de lo académico sino de sostener a los chicos emocionalmente. Como experiencia de una hija estudiando afuera, estamos muy agradecidos.</q>
             <div class="testimony-author">
                 <div class="avatar">
-                    <img src="webp/estudiante_010.webp" alt="">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjVTvswNZtIg_ZLUHLkcZJf5PGs1V4vZf_wbgP8YlpEQJksHC0Sprg=w72-h72-p-rp-mo-br100" alt="">
                 </div>
                 <div class="testimony-author-info flex flex-col flex-gap flex-item-stretch">
-                    <p class="regular">Matías P.</p>
-                    <p class="light">Estudiante de 3° año</p>
+                    <p class="regular">Claudia Centurion</p>
+                    <p class="light">Madre de estudiante</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimony m-auto w-page m-auto">
+        <div class="testimony-quote">
+            <q>Muy buena experiencia, te ayudan en todo lo referido al cursado y también los cursos intensivos para preparar mesas te salvan la vida, son cortos, las clases son integradoras y participativas, lo que te ayuda un montón ya que todos los finales son orales. Lo súper recomiendo 10/10.</q>
+            <div class="testimony-author">
+                <div class="avatar">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocL8PhRJcKybE9W5CPxWAYcPQA9pOx5Af7KzY-reoeJc7iBw2Y7i=w72-h72-p-rp-mo-br100" alt="">
+                </div>
+                <div class="testimony-author-info flex flex-col flex-gap flex-item-stretch">
+                    <p class="regular">Lorena Escobar</p>
+                    <p class="light">Estudiante de medicina</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimony m-auto w-page m-auto">
+        <div class="testimony-quote">
+            <q>El mejor lugar para preparar tus materias de medicina</q>
+            <div class="testimony-author">
+                <div class="avatar">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjWdgIk9n8ejTT-sZhi_osnHFP0tylsPGpUGZ3LNbd0FvTDCOFd-lw=w72-h72-p-rp-mo-ba4-br100" alt="">
+                </div>
+                <div class="testimony-author-info flex flex-col flex-gap flex-item-stretch">
+                    <p class="regular">Mauricio Oderda</p>
+                    <p class="light">Estudiante de medicina</p>
                 </div>
             </div>
         </div>
@@ -29,13 +59,13 @@ import Carrusel from "../components/Carrusel.astro";
             <p>¿Tenés dudas?</p>
             <p>¡Escribinos por WhatsApp!</p>
         </div>
-        <a class="btn-cta" target="_blank" href="https://wa.me/5493412166867">
+        <a class="btn-cta" href="#contacto">
             <WhatsAppIcon color="--hue-purple-light" />
             <strong>Enviar mensaje</strong>
         </a>
 
         <p style="padding-top: var(--element-vertical-space)">También puedes contactarnos por correo</p>
-        <a class="btn-cta" href="mailto:contacto@caminstituto.com">
+        <a class="btn-cta" href="#contacto">
             <EmailLetterIcon color="--hue-purple-light" />
             <strong>Enviar email</strong>
         </a>
@@ -102,7 +132,6 @@ import Carrusel from "../components/Carrusel.astro";
     .avatar img {
         width: 2.5rem;
         aspect-ratio: 1;
-        transform: scale(3) translate(3%, 18%); /* Ajustar la posición vertical de la imagen */
     }
 
 

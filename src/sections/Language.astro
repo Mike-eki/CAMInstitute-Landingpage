@@ -46,8 +46,8 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
             <div class="bubble-white flex-gap-lg">
                 <p>Certificación en:</p>
                 <div class="flex flex-gap flex-align flex-wrap">
-                    <img class="dele" src="logos/dele_LOGO_original.webp" alt="" srcset="">
-                    <img class="siele" src="logos/siele_LOGO_original.webp" alt="" srcset="">
+                    <img class="dele" src="landingpage/logos/dele_LOGO_original.webp" alt="" srcset="">
+                    <img class="siele" src="landingpage/logos/siele_LOGO_original.webp" alt="" srcset="">
                 </div>
             </div>
         </div>
@@ -98,7 +98,7 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
     <div class="flex flex-wrap">
         <div class="bubble flex-item-25 corner-bottom-right relative">
             <div class="bubble-white h-full flex-align flex-justify">
-                <img src="logos/HAIZEA_logo.svg" alt="">
+                <img src="landingpage/logos/HAIZEA_logo.svg" alt="">
             </div>
         </div>
 
@@ -106,8 +106,8 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
             <div class="bubble-white flex-gap-lg">
                 <p>Certificación en:</p>
                 <div class="flex flex-gap flex-align flex-wrap">
-                    <img class="siele" src="logos/siele_LOGO_original.webp" alt="" srcset="">
-                    <img class="cele" src="logos/cele_LOGO_original.webp" alt="" srcset="">
+                    <img class="siele" src="landingpage/logos/siele_LOGO_original.webp" alt="" srcset="">
+                    <img class="cele" src="landingpage/logos/cele_LOGO_original.webp" alt="" srcset="">
                 </div>
             </div>
         </div>
@@ -162,18 +162,36 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
     </div>
 </div>
 
+<div class="space-testimony w-page m-auto">
+
+        <div class="testimony m-auto w-page m-auto space-testimony">
+            <div class="testimony-quote">
+                <q>El mejor curso de español en Rosario.</q>
+                <div class="testimony-author">
+                    <div class="avatar">
+                        <img src="https://lh3.googleusercontent.com/a/ACg8ocLJR46dMuWx6Q_A01Xs2s9bZTsS8a1ienPboMq8gOCMH_kYvQ=w72-h72-p-rp-mo-ba2-br100" alt="">
+                    </div>
+                    <div class="testimony-author-info flex flex-col flex-gap flex-item-stretch">
+                        <p class="regular red-light">Roberta Moraes</p>
+                        <p class="light red-light">Estudiante</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <div class="call-to-action space-huge text-align">
         <div class="flex flex-col flex-gap red-light">
             <p>¿Tenés dudas?</p>
             <p>¡Escribinos por WhatsApp!</p>
         </div>
-        <a class="btn-cta m-block" target="_blank" href="https://wa.me/5493412166867">
+        <a class="btn-cta m-block" href="#contacto">
             <WhatsAppIcon color="--hue-red-dark" />
             <strong class="regular red-dark">Enviar mensaje</strong>
         </a>
 
         <p class="red-light" style="padding-top: var(--element-vertical-space)">También puedes contactarnos por correo</p>
-        <a class="btn-cta m-block" href="mailto:contacto@caminstituto.com">
+        <a class="btn-cta m-block" href="#contacto">
             <EmailLetterIcon color="--hue-red-dark" />
             <strong class="regular red-dark">Enviar email</strong>
         </a>
@@ -379,6 +397,59 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
 
     .show {
         display: block;
+    }
+
+    .testimony-quote q {
+        font-style: normal;
+        font-weight: 500;
+        font-size: var(--subtitle);
+        color: var(--hue-red-light);
+    }
+    
+    .testimony {
+        max-width: 30rem;
+
+        border: 2px solid var(--hue-red-light);
+        border-radius: var(--rounded);
+
+        padding-block: var(--content-vertical-space);
+        padding-inline: var(--content-horizontal-space);
+    }
+    .testimony-quote {
+        display: flex;
+        flex-direction: column;
+        gap: var(--element-vertical-space);
+    }
+
+    .testimony-author {
+        display: flex;
+        align-items: center;
+        gap: var(--element-horizontal-space);
+    }
+    .avatar {
+        display: flex;
+        align-items: center;
+
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .avatar img {
+        width: 2.5rem;
+        aspect-ratio: 1;
+    }
+
+    .regular {
+        font-weight: 400;
+    }
+    .light {
+        font-weight: 300;
+    }
+
+    .space-testimony {
+        display: flex;
+        flex-direction: column;
+        margin-block: var(--gap-space);
+        gap: var(--content-vertical-space);
     }
 
     @media screen and (max-width: 750px) {

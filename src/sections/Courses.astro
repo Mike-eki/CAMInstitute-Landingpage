@@ -14,16 +14,16 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
     </hgroup>
     
     <div class="call-to-action p-top text-align">
-        <a class="btn-cta" target="_blank" href="https://wa.me/5493412166867">
+        <a class="btn-cta" href="#contacto">
             <WhatsAppIcon color="--hue-green-dark"/>
             <strong class="green-dark">¡Pedí info sobre tu curso ideal!</strong>
         </a>
         <p class="m-top green-light">Certificación con aval universitario</p>
-        <img class="uai m-top" src="logos/uai_LOGO_white.webp" alt="" srcset="">
+        <img class="uai m-top" src="landingpage/logos/uai_LOGO_white.webp" alt="" srcset="">
     </div>
 
     <div class="image-frame space-huge text-align">
-        <img class="rounded w-page w-100" src="webp/estudiantes_006.webp" alt="">
+        <img class="rounded w-page w-100 as-ratio" src="landingpage/webp/courses.webp" alt="">
     </div>
 
     <!-- INSTRUCTORADOS -->
@@ -33,7 +33,7 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
                 <h2 class="special-subtitle medium green-dark">Instructorados</h2>
             </div>
             <div class="bubble flex-item-center flex-item-25 flex-item-padding h-min">
-                <img width="72" src="logos/yogafunes_LOGO.webp">
+                <img width="72" src="landingpage/logos/yogafunes_LOGO.webp">
             </div>
         </header>
         <section class="flex">
@@ -179,16 +179,48 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
             <p>¿Tenés dudas?</p>
             <p>¡Escribinos por WhatsApp!</p>
         </div>
-        <a class="btn-cta m-block" target="_blank" href="https://wa.me/5493412166867">
+        <a class="btn-cta m-block" target="_blank" href="#contacto">
             <WhatsAppIcon color="--hue-green-dark" />
             <strong class="regular green-dark">Enviar mensaje</strong>
         </a>
 
         <p class="green-light" style="padding-top: var(--element-vertical-space)">También puedes contactarnos por correo</p>
-        <a class="btn-cta m-block" href="mailto:contacto@caminstituto.com">
+        <a class="btn-cta m-block" href="#contacto">
             <EmailLetterIcon color="--hue-green-dark" />
             <strong class="regular green-dark">Enviar email</strong>
         </a>
+    </div>
+
+    <div class="space-testimony w-page m-auto">
+        <div class="testimony m-auto w-page m-auto space-testimony">
+            <div class="testimony-quote">
+                <q>Excelente lugar y profes. La atención un 10!!! Súper recomendados.</q>
+                <div class="testimony-author">
+                    <div class="avatar">
+                        <img src="https://lh3.googleusercontent.com/a/ACg8ocIPEiyTn-f5OO1j5_f8ud5l_obg8Nm2sMHWDRMgrlR7PBVRl0nc=w72-h72-p-rp-mo-br100" alt="">
+                    </div>
+                    <div class="testimony-author-info flex flex-col flex-gap flex-item-stretch">
+                        <p class="regular green-light">Prisci Gomez</p>
+                        <p class="light green-light">Estudiante</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimony m-auto w-page m-auto space-testimony">
+            <div class="testimony-quote">
+                <q>Son super rápidos y eficientes nada que quejarme, al contrario, son muy buenos.</q>
+                <div class="testimony-author">
+                    <div class="avatar">
+                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjWGR-tltfOiI-mxNB_FlddX1JaGwWl_gXXonpPdegAni8rOnnSl=w72-h72-p-rp-mo-br100" alt="">
+                    </div>
+                    <div class="testimony-author-info flex flex-col flex-gap flex-item-stretch">
+                        <p class="regular green-light">Dellanyra Claudia Pariguana Bernal</p>
+                        <p class="light green-light">Estudiante</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </section>
@@ -319,5 +351,64 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
 
     .flex-wrap {
         flex-wrap: wrap;
+    }
+
+    .as-ratio {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        object-position: center calc(50% - 100px);
+    }
+
+    .testimony-quote q {
+        font-style: normal;
+        font-weight: 500;
+        font-size: var(--subtitle);
+        color: var(--hue-green-light);
+    }
+    
+    .testimony {
+        max-width: 30rem;
+
+        border: 2px solid var(--hue-green-light);
+        border-radius: var(--rounded);
+
+        padding-block: var(--content-vertical-space);
+        padding-inline: var(--content-horizontal-space);
+    }
+    .testimony-quote {
+        display: flex;
+        flex-direction: column;
+        gap: var(--element-vertical-space);
+    }
+
+    .testimony-author {
+        display: flex;
+        align-items: center;
+        gap: var(--element-horizontal-space);
+    }
+    .avatar {
+        display: flex;
+        align-items: center;
+
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .avatar img {
+        width: 2.5rem;
+        aspect-ratio: 1;
+    }
+
+    .regular {
+        font-weight: 400;
+    }
+    .light {
+        font-weight: 300;
+    }
+
+    .space-testimony {
+        display: flex;
+        flex-direction: column;
+        margin-top: var(--gap-space);
+        gap: var(--content-vertical-space);
     }
 </style>

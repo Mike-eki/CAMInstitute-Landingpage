@@ -17,41 +17,37 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
         </div>
 
         <div class="grid-item-2">
-            <div class="btn-cta rounded">
-                <div class="flex flex-center gap-space">
-                    <WhatsAppIcon color="--hue-purple" size={36} />
-                    <strong class="medium font-subtitle">¡Empezá hoy!</strong>
-                </div>
-                <a class="wsp-cta" target="_blank" href="https://wa.me/5493412166867">Español</a>
-                <a class="wsp-cta" target="_blank" href="https://wa.me/5493415469738">Português</a>
-            </div>
+            <a class="btn-cta rounded" href="#contacto">
+                <WhatsAppIcon color="--hue-purple" size={36} />
+                <strong class="medium font-subtitle">¡Empezá hoy!</strong>
+            </a>
             <aside class="bubble-fill rounded">
                 <p>Con soporte de:</p>
                 <ul class="logo-list">
                     <li>
-                        <img class="uai" src="logos/uai_LOGO_black.webp" alt="UAI">
+                        <img class="uai" src="landingpage/logos/uai_LOGO_black.webp" alt="UAI">
                     </li>
                     <li>
-                        <img class="dele" src="logos/dele_LOGO_black.webp" alt="DELE">
+                        <img class="dele" src="landingpage/logos/dele_LOGO_black.webp" alt="DELE">
                     </li>
                     <li>
-                        <img class="siele" src="logos/siele_LOGO_black.webp" alt="SIELE">
+                        <img class="siele" src="landingpage/logos/siele_LOGO_black.webp" alt="SIELE">
                     </li>
                     <li>
-                        <img class="sea" src="logos/sea_LOGO_black.webp" alt="SEA">
+                        <img class="sea" src="landingpage/logos/sea_LOGO_black.webp" alt="SEA">
                     </li>
                     <li>
-                        <img class="haizea" src="logos/HAIZEA_logo.svg" alt="HAIZEA">
+                        <img class="haizea" src="landingpage/logos/HAIZEA_logo.svg" alt="HAIZEA">
                     </li>
                     <li>
-                        <img class="cele" src="logos/cele_LOGO_black.webp" alt="CELE">
+                        <img class="cele" src="landingpage/logos/cele_LOGO_black.webp" alt="CELE">
                     </li>
                 </ul>
             </aside>
         </div>
 
         <div class="grid-item-3 image-frame">
-            <img class="rounded-change" src="webp/estudiantes_001.webp" alt="">
+            <img class="rounded-change" src="landingpage/webp/hero-cut.webp" alt="">
         </div>
 
     </article>
@@ -233,10 +229,6 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
         max-width: 6rem;
     }
 
-    .image-frame {
-        /* overflow: hidden; */
-    }
-
     .image-frame img {
         display: block;
         width: 100%;
@@ -282,33 +274,9 @@ import WhatsAppIcon from '../svg/WhatsAppIcon.astro';
             border-radius: 0px;
         }
 
+        .image-frame {
+            width: 100%;
+            height: 100%;
+        }
     }
 </style>
-
-
-<script>
-    function handleWhatsAppCTAs() {
-        
-        const ctas = document.querySelectorAll('.wsp-cta');
-        
-        ctas.forEach(
-            cta => {
-                if (cta.classList.contains('show'))
-                    cta.classList.remove('show');
-                else 
-                    cta.classList.add('show');
-                
-            }
-        );
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-
-        const btnCTA = document.querySelector(".btn-cta");
-        if (btnCTA)
-            btnCTA.addEventListener('click', () => handleWhatsAppCTAs());
-
-    });
-
-    
-</script>

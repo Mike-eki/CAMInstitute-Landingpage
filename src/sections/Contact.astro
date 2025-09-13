@@ -1,5 +1,6 @@
 ---
 import Form from "../components/Form.astro"
+import WhatsAppIcon from "../svg/WhatsAppIcon.astro"
 
 ---
 
@@ -15,7 +16,7 @@ import Form from "../components/Form.astro"
         </div>
         <div class="flex flex-col">
             <div class="image-frame flex-4">
-                <img class="image rounded corner-bottom-left" src="webp/directora_lucia_roca_recorte.webp" alt="">
+                <img class="image rounded corner-bottom-left" src="landingpage/webp/directora_lucia_roca_recorte.webp" alt="">
             </div>
             <div class="bubble corner-top-left text-center">
                 <p class="f-blue-light body medium" id="contacto">Lucía Roca</p>
@@ -27,6 +28,17 @@ import Form from "../components/Form.astro"
     <hgroup class="text-align w-page m-auto">
         <h2 class="subtitle medium">Confía en quienes creen en tu éxito. <strong class="medium f-blue-light">¡Contáctanos!</strong></h2>
     </hgroup>
+
+    <div class="flex flex-item-center flex-justify-center gap-space">
+        <a class="inline-flex" target="_blank" href="https://wa.me/5493412166867">
+        <WhatsAppIcon color="--hue-blue-light" size={24} />
+        <strong class="medium">Español</strong>
+        </a>
+        <a class="inline-flex" target="_blank" href="https://wa.me/5493415469738">
+            <WhatsAppIcon color="--hue-blue-light" size={24} />
+            <strong class="medium">Português</strong>
+        </a>
+    </div>
 
     <Form />
 </section>
@@ -86,6 +98,17 @@ import Form from "../components/Form.astro"
     .flex {
         display: flex;
     }
+    .inline-flex {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--gap-space);
+        color: var(--hue-blue-light);
+        background-color: var(--hue-blue);
+        padding-inline: var(--element-horizontal-space);
+        padding-block: var(--element-vertical-space);
+        border-radius: var(--rounded);
+    }
     .flex-col {
         flex-direction: column;
     }
@@ -93,8 +116,14 @@ import Form from "../components/Form.astro"
         align-self: stretch;
         align-content: center;
     }
+    .flex-justify-center {
+        justify-content: center;
+    }
     .flex-content-space {
         gap: calc(var(--gap-space-lg) * 2);
+    }
+    .gap-space {
+        gap: var(--gap-space-lg);
     }
 
     .w-full {
