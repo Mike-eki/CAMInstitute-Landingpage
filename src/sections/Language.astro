@@ -17,7 +17,7 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
         <h2 class="title medium"><strong class="red medium">Aprende español</strong> con un enfoque cultural y personalizado</h2>
         <p class="regular l-15">Indícanos tu país de residencia y <strong class="red regular">avanza
             con flexibilidad</strong></p>
-        <div class="flex m-auto-change">
+        <menu class="flex m-auto-change">
             <button class="btn-country arg flex flex-gap flex-align active">
                 Argentina
                 <FlagWith Flag={ArgentinaIcon} MinorFlag={BrazilIcon} />
@@ -26,44 +26,40 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
                 Paraguay
                 <FlagWith Flag={ParaguayIcon} MinorFlag={BrazilIcon} />
             </button>
-        </div>
+        </menu>
     </hgroup>
 
-<div class="tier-by-country argentina content-space m-auto w-page show">
+<article class="tier-by-country argentina content-space m-auto w-page show">
 
-    <div class="flex flex-wrap">
-        <div class="bubble flex-item-25 corner-bottom-right relative">
-            <div class="bubble-white h-full flex-align flex-justify">
-                <!-- <ArgentinaIcon size={36} /> -->
+    <header class="flex flex-wrap">
+        <section class="bubble flex-item-25 corner-bottom-right relative">
+            <figure class="bubble-white h-full flex-align flex-justify">
                  <FlagWith Flag={ArgentinaIcon} MinorFlag={BrazilIcon} />
-            </div>
-            <!-- <div class="white-circle">
-                    <BrazilIcon size={32} />
-            </div> -->
-        </div>
+            </figure>
+        </section>
 
-        <div class="bubble flex-item-75 corner-bottom-left corner-bottom-right">
+        <section class="bubble flex-item-75 corner-bottom-left corner-bottom-right">
             <div class="bubble-white flex-gap-lg">
                 <p>Certificación en:</p>
-                <div class="flex flex-gap flex-align flex-wrap">
-                    <img class="dele" src="landingpage/logos/dele_LOGO_original.webp" alt="" srcset="">
-                    <img class="siele" src="landingpage/logos/siele_LOGO_original.webp" alt="" srcset="">
-                </div>
+                <picture class="flex flex-gap flex-align flex-wrap">
+                    <img class="dele" src="landingpage/logos/dele_LOGO_original.webp" alt="Logo del examen DELE">
+                    <img class="siele" src="landingpage/logos/siele_LOGO_original.webp" alt="Logo de examen SIELE">
+                </picture>
             </div>
-        </div>
-    </div>
+        </section>
+    </header>
     
-    <div class="bubble corner-bottom-left corner-top-right">
-        <h4 class="subtitle medium">Preparación para SIELE y DUCLE</h4>
+    <hgroup class="bubble corner-bottom-left corner-top-right">
+        <h4 class="subtitle medium">Preparación para examenes SIELE y DUCLE</h4>
         <p class="bubble-white">
             <strong class="flex flex-align flex-gap-s regular">
                 <BookIcon color="--hue-red-dark" size={24} />
                 Niveles A1 a C1 con enfoque comunicativo y cultural.
             </strong>
         </p>
-    </div>
+    </hgroup>
 
-    <div class="bubble corner-top-left corner-bottom-right">
+    <hgroup class="bubble corner-top-left corner-bottom-right">
         <h4 class="subtitle medium">Cursos de español general y especializado</h4>
         <p class="bubble-white">
             <strong class="flex flex-align flex-gap-s regular">
@@ -71,8 +67,8 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
                 Simulacros, corrección personalizada y estrategias de examen.
             </strong>
         </p>
-    </div>
-    <div class="bubble corner-top-right corner-bottom-left">
+    </hgroup>
+    <hgroup class="bubble corner-top-right corner-bottom-left">
         <h4 class="subtitle medium">Exámenes SIELE</h4>
         <p class="bubble-white">
             <strong class="flex flex-align flex-gap-s regular">
@@ -80,8 +76,8 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
                 Rendí en nuestras instalaciones con supervisores certificados.
             </strong>
         </p>
-    </div>
-    <div class="bubble corner-top-left">
+    </hgroup>
+    <hgroup class="bubble corner-top-left">
         <h4 class="subtitle medium">Plataforma exclusiva</h4>
         <p class="bubble-white">
             <strong class="flex flex-align flex-gap-s regular">
@@ -89,31 +85,31 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
                 Videos explicativos sobre todos los temas y ejercicios de práctica extra con autocorrección, además de materiales para practicar la comprensión auditiva y de lectura.
             </strong>
         </p>
-    </div>
+    </hgroup>
 
-</div>
+</article>
 
-<div class="tier-by-country paraguay content-space m-auto w-page">
+<article class="tier-by-country paraguay content-space m-auto w-page">
 
-    <div class="flex flex-wrap">
-        <div class="bubble flex-item-25 corner-bottom-right relative">
-            <div class="bubble-white h-full flex-align flex-justify">
+    <header class="flex flex-wrap">
+        <section class="bubble flex-item-25 corner-bottom-right relative">
+            <figure class="bubble-white h-full flex-align flex-justify">
                 <img src="landingpage/logos/HAIZEA_logo.svg" alt="">
-            </div>
-        </div>
+            </figure>
+        </section>
 
-        <div class="bubble flex-item-75 corner-bottom-left corner-bottom-right">
+        <section class="bubble flex-item-75 corner-bottom-left corner-bottom-right">
             <div class="bubble-white flex-gap-lg">
                 <p>Certificación en:</p>
-                <div class="flex flex-gap flex-align flex-wrap">
+                <picture class="flex flex-gap flex-align flex-wrap">
                     <img class="siele" src="landingpage/logos/siele_LOGO_original.webp" alt="" srcset="">
                     <img class="cele" src="landingpage/logos/cele_LOGO_original.webp" alt="" srcset="">
-                </div>
+                </picture>
             </div>
-        </div>
-    </div>
+        </section>
+    </header>
     
-    <div class="bubble corner-bottom-left corner-top-right">
+    <hgroup class="bubble corner-bottom-left corner-top-right">
         <h4 class="subtitle medium">Cursos virtuales con seguimiento personalizado</h4>
         <p class="bubble-white">
             <strong class="flex flex-align flex-gap-s regular">
@@ -121,18 +117,18 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
                 Planificación adaptada a tu horario y nivel.
             </strong>
         </p>
-    </div>
+    </hgroup>
 
-    <div class="bubble corner-top-left corner-bottom-right">
-        <h4 class="subtitle medium">Preparación para SIELE y DUCLE</h4>
+    <hgroup class="bubble corner-top-left corner-bottom-right">
+        <h4 class="subtitle medium">Preparación para examenes SIELE y DUCLE</h4>
         <p class="bubble-white">
             <strong class="flex flex-align flex-gap-s regular">
                 <ClockIcon color="--hue-red-dark" size={24} />
                 Simulacros oficiales, corrección detallada.
             </strong>
         </p>
-    </div>
-    <div class="bubble corner-bottom-left corner-top-right corner-bottom-right">
+    </hgroup>
+    <hgroup class="bubble corner-bottom-left corner-top-right corner-bottom-right">
         <h4 class="subtitle medium">Exámenes SIELE</h4>
         <p class="bubble-white">
             <strong class="flex flex-align flex-gap-s regular">
@@ -140,8 +136,8 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
                 Rendí en nuestras instalaciones con supervisores certificados.
             </strong>
         </p>
-    </div>
-    <div class="bubble corner-top-right corner-bottom-left corner-top-left">
+    </hgroup>
+    <hgroup class="bubble corner-top-right corner-bottom-left corner-top-left">
         <h4 class="subtitle medium">Clases en vivo con profesores nativos</h4>
         <p class="bubble-white">
             <strong class="flex flex-align flex-gap-s regular">
@@ -149,9 +145,9 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
                 Interacción real, práctica constante y feedback inmediato.
             </strong>
         </p>
-    </div>
+    </hgroup>
 
-    <div class="bubble corner-top-left">
+    <hgroup class="bubble corner-top-left">
         <h4 class="subtitle medium">Plataforma exclusiva</h4>
         <p class="bubble-white">
             <strong class="flex flex-align flex-gap-s regular">
@@ -159,32 +155,33 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
                 Videos explicativos sobre todos los temas y ejercicios de práctica extra con autocorrección, además de materiales para practicar la comprensión auditiva y de lectura.
             </strong>
         </p>
-    </div>
-</div>
+    </hgroup>
+</article>
 
-<div class="space-testimony w-page m-auto">
+    <footer class="space-testimony w-page m-auto">
 
-        <div class="testimony m-auto w-page m-auto space-testimony">
-            <div class="testimony-quote">
+        <article class="testimony m-auto w-page m-auto space-testimony">
+            <blockquote class="testimony-quote">
                 <q>El mejor curso de español en Rosario.</q>
-                <div class="testimony-author">
-                    <div class="avatar">
-                        <img src="landingpage/images/roberta_moraes.png" alt="">
-                    </div>
-                    <div class="testimony-author-info flex flex-col flex-gap flex-item-stretch">
+                <footer class="testimony-author">
+                    <picture class="avatar">
+                        <img src="landingpage/images/roberta_moraes.png" alt="Foto de Roberta Moraes">
+                    </picture>
+                    <small class="testimony-author-info flex flex-col flex-gap flex-item-stretch">
                         <p class="regular red-light">Roberta Moraes</p>
                         <p class="light red-light">Estudiante</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    </small>
+                </footer>
+            </blockquote>
+        </article>
 
-<div class="call-to-action space-huge text-align">
-        <div class="flex flex-col flex-gap red-light">
+    </footer>
+
+    <nav class="call-to-action space-huge text-align">
+        <hgroup class="flex flex-col flex-gap red-light">
             <p>¿Tenés dudas?</p>
             <p>¡Escribinos por WhatsApp!</p>
-        </div>
+        </hgroup>
         <a class="btn-cta m-block" href="#contacto">
             <WhatsAppIcon color="--hue-red-dark" />
             <strong class="regular red-dark">Enviar mensaje</strong>
@@ -195,7 +192,7 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
             <EmailLetterIcon color="--hue-red-dark" />
             <strong class="regular red-dark">Enviar email</strong>
         </a>
-</div>
+    </nav>
 
 </section>
 
@@ -450,6 +447,18 @@ import EmailLetterIcon from "../svg/EmailLetterIcon.astro";
         flex-direction: column;
         margin-block: var(--gap-space);
         gap: var(--content-vertical-space);
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    blockquote {
+        margin: 0;
+    }
+    small {
+        font-size: 1rem;
+        font-style: normal;
     }
 
     @media screen and (max-width: 750px) {

@@ -9,56 +9,56 @@ import Carrusel from "../components/Carrusel.astro";
     <h1 class="text-align w-page m-auto">Acompañamiento para aprobar tus materias de Medicina</h1>
     <Carrusel />
 
-    <div class="testimony m-auto w-page m-auto">
-        <div class="testimony-quote">
+    <article class="testimony m-auto w-page m-auto">
+        <blockquote class="testimony-quote">
             <q>¡Excelente la atención! Es integral y se ocupan no solo de lo académico sino de sostener a los chicos emocionalmente. Como experiencia de una hija estudiando afuera, estamos muy agradecidos.</q>
-            <div class="testimony-author">
-                <div class="avatar">
-                    <img src="landingpage/images/claudia_centurion.png" alt="">
-                </div>
-                <div class="testimony-author-info flex flex-col flex-gap flex-item-stretch">
+            <footer class="testimony-author">
+                <picture class="avatar">
+                    <img src="landingpage/images/claudia_centurion.png" alt="Foto de Claudia Centurion">
+                </picture>
+                <small class="testimony-author-info flex flex-col flex-gap">
                     <p class="regular">Claudia Centurion</p>
                     <p class="light">Madre de estudiante</p>
-                </div>
+                </small>
             </div>
-        </div>
-    </div>
+        </blockquote>
+    </article>
 
-    <div class="testimony m-auto w-page m-auto">
-        <div class="testimony-quote">
+    <article class="testimony m-auto w-page m-auto">
+        <blockquote class="testimony-quote">
             <q>Muy buena experiencia, te ayudan en todo lo referido al cursado y también los cursos intensivos para preparar mesas te salvan la vida, son cortos, las clases son integradoras y participativas, lo que te ayuda un montón ya que todos los finales son orales. Lo súper recomiendo 10/10.</q>
-            <div class="testimony-author">
-                <div class="avatar">
-                    <img src="landingpage/images/lorena_escobar.png" alt="">
-                </div>
-                <div class="testimony-author-info flex flex-col flex-gap flex-item-stretch">
+            <footer class="testimony-author">
+                <picture class="avatar">
+                    <img src="landingpage/images/lorena_escobar.png" alt="Foto de Lorena Escobar">
+                </picture>
+                <small class="testimony-author-info flex flex-col flex-gap">
                     <p class="regular">Lorena Escobar</p>
                     <p class="light">Estudiante de medicina</p>
-                </div>
-            </div>
-        </div>
-    </div>
+                </small>
+            </footer>
+        </blockquote>
+    </article>
 
-    <div class="testimony m-auto w-page m-auto">
-        <div class="testimony-quote">
+    <article class="testimony m-auto w-page m-auto">
+        <blockquote class="testimony-quote">
             <q>El mejor lugar para preparar tus materias de medicina</q>
-            <div class="testimony-author">
-                <div class="avatar">
-                    <img src="landingpage/images/mauricio_oderda.png" alt="">
-                </div>
-                <div class="testimony-author-info flex flex-col flex-gap flex-item-stretch">
+            <footer class="testimony-author">
+                <picture class="avatar">
+                    <img src="landingpage/images/mauricio_oderda.png" alt="Foto de Mauricio Oderda">
+                </picture>
+                <small class="testimony-author-info flex flex-col flex-gap">
                     <p class="regular">Mauricio Oderda</p>
                     <p class="light">Estudiante de medicina</p>
-                </div>
-            </div>
-        </div>
-    </div>
+                </small>
+            </footer>
+        </blockquote>
+    </article>
 
-    <div class="call-to-action text-align">
-        <div class="flex">
+    <nav class="call-to-action text-align">
+        <hgroup class="flex">
             <p>¿Tenés dudas?</p>
             <p>¡Escribinos por WhatsApp!</p>
-        </div>
+        </hgroup>
         <a class="btn-cta" href="#contacto">
             <WhatsAppIcon color="--hue-purple-light" />
             <strong>Enviar mensaje</strong>
@@ -69,7 +69,7 @@ import Carrusel from "../components/Carrusel.astro";
             <EmailLetterIcon color="--hue-purple-light" />
             <strong>Enviar email</strong>
         </a>
-    </div>
+    </nav>
     
 </section>
 
@@ -115,6 +115,7 @@ import Carrusel from "../components/Carrusel.astro";
         display: flex;
         flex-direction: column;
         gap: var(--element-vertical-space);
+        margin: 0;
     }
 
     .testimony-author {
@@ -132,6 +133,10 @@ import Carrusel from "../components/Carrusel.astro";
     .avatar img {
         width: 2.5rem;
         aspect-ratio: 1;
+    }
+
+    .testimony-author-info {
+        font-size: 1rem;
     }
 
 

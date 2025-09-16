@@ -5,22 +5,22 @@ import TeacherIcon from "../svg/TeacherIcon.astro"
 ---
 
 <section class="keypoints">
-    <aside class="flex w-page m-auto">
-    <div class="flex-item flex-col bubble-fill one huge">
+    <hgroup class="flex w-page m-auto">
+    <figure class="flex-item flex-col bubble-fill one huge">
         <CompassIcon color="--hue-purple-light" size={36} />
         <p class="font-medium small">Trayectoria +15 años</p>
-    </div>
-    <div class="flex-item flex-col bubble-fill two huge">
+    </figure>
+    <figure class="flex-item flex-col bubble-fill two huge">
         <TeacherIcon color="--hue-purple-light" size={36 - 6} />
         <p class="font-medium small">Docentes calificados</p>
-    </div>
-    </aside>
-    <aside class="flex">
-        <div class="flex-item flex-col bubble-fill huge">
+    </figure>
+    </hgroup>
+    <hgroup class="flex">
+        <figure class="flex-item flex-col bubble-fill huge">
             <SchoolIcon color="--hue-purple-light" size={36} />
             <p class="font-medium big">Plataforma virtual moderna</p>
-        </div>
-    </aside>
+        </figure>
+    </hgroup>
 </section>
 
 <style>
@@ -77,5 +77,8 @@ import TeacherIcon from "../svg/TeacherIcon.astro"
     }
     .bubble-fill.two {
         border-radius: var(--rounded) var(--rounded) var(--rounded) 0;
+    }
+    figure {
+        margin: 0;
     }
 </style>

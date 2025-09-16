@@ -203,6 +203,8 @@ import { Font } from "astro:assets";
 		<!-- Manifest -->
 		<link rel="manifest" href="landingpage/favicon/site.webmanifest" />
 
+		<link rel="preload" fetchpriority="high" as="image" href="landingpage/webp/hero-cut.webp" type="image/webp">
+
 		<Font cssVariable="--font-clash-display" />
 
 		<meta name="generator" content={Astro.generator} />
@@ -211,7 +213,7 @@ import { Font } from "astro:assets";
 		<slot />
 
 		<!-- Google Analytics (opcional - reemplaza GA_MEASUREMENT_ID por tu ID real) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-10CK89X7RY"></script>
 		<script>
 			// Tipado explícito para evitar errores en IDE
 			const dataLayer: any[] = window.dataLayer || [];
@@ -222,8 +224,9 @@ import { Font } from "astro:assets";
 			}
 
 			gtag('js', new Date());
-			gtag('config', 'G-XXXXXXXXXX');
+			gtag('config', 'G-10CK89X7RY');
 		</script>
+		<!-- Google tag (gtag.js) -->
 	</body>
 </html>
 
